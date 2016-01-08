@@ -1,0 +1,3 @@
+; Switch mode
+global mode
+Capslock::SendEscape()

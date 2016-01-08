@@ -1,0 +1,309 @@
+#Include %A_ScriptDir%\modal\mousejump
+
+
+global moveMouseThreads := 0
+global slowSpeed := 8
+global midSpeed := 30
+global fastSpeed := 300
+
+
+ActivateMouse() {
+    mousejumpActivate()
+
+    Hotkey, f, RightMouseDown
+    Hotkey, f Up, RightMouseUp
+    Hotkey, t, MiddleMouseDown
+    Hotkey, t Up, MiddleMouseUp
+
+    Hotkey, r, SendScrollUp
+    Hotkey, v, SendScrollDown
+    Hotkey, d, SendScrollLeft
+    Hotkey, g, SendScrollRight
+    Hotkey, Space, MouseDown
+    Hotkey, Space Up, MouseUp
+    Hotkey, n, SlowLeftMove
+    Hotkey, m, SlowDownMove
+    Hotkey, `,, SlowUpMove
+    Hotkey, `., SlowRightMove
+    Hotkey, h, MidLeftMove
+    Hotkey, j, MidDownMove
+    Hotkey, k, MidUpMove
+    Hotkey, l, MidRightMove
+    Hotkey, y, FastLeftMove
+    Hotkey, u, FastDownMove
+    Hotkey, i, FastUpMove
+    Hotkey, o, FastRightMove
+
+    Hotkey, +r, SendScrollUp
+    Hotkey, +v, SendScrollDown
+    Hotkey, +d, SendScrollLeft
+    Hotkey, +g, SendScrollRight
+    Hotkey, +Space, MouseDown
+    Hotkey, +Space Up, MouseUp
+    Hotkey, +n, SlowLeftMove
+    Hotkey, +m, SlowDownMove
+    Hotkey, +`,, SlowUpMove
+    Hotkey, +`., SlowRightMove
+    Hotkey, +h, MidLeftMove
+    Hotkey, +j, MidDownMove
+    Hotkey, +k, MidUpMove
+    Hotkey, +l, MidRightMove
+    Hotkey, +y, FastLeftMove
+    Hotkey, +u, FastDownMove
+    Hotkey, +i, FastUpMove
+    Hotkey, +o, FastRightMove
+
+    Hotkey, ^r, SendScrollUp
+    Hotkey, ^v, SendScrollDown
+    Hotkey, ^d, SendScrollLeft
+    Hotkey, ^g, SendScrollRight
+    Hotkey, ^Space, MouseDown
+    Hotkey, ^Space Up, MouseUp
+    Hotkey, ^n, SlowLeftMove
+    Hotkey, ^m, SlowDownMove
+    Hotkey, ^`,, SlowUpMove
+    Hotkey, ^`., SlowRightMove
+    Hotkey, ^h, MidLeftMove
+    Hotkey, ^j, MidDownMove
+    Hotkey, ^k, MidUpMove
+    Hotkey, ^l, MidRightMove
+    Hotkey, ^y, FastLeftMove
+    Hotkey, ^u, FastDownMove
+    Hotkey, ^i, FastUpMove
+    Hotkey, ^o, FastRightMove
+
+    Hotkey, f, On
+    Hotkey, f Up, On
+    Hotkey, t, On
+    Hotkey, t Up, On
+
+    Hotkey, +r, On
+    Hotkey, +v, On
+    Hotkey, +d, On
+    Hotkey, +g, On
+    Hotkey, +Space, On
+    Hotkey, +Space Up, On
+    Hotkey, +y, On
+    Hotkey, +u, On
+    Hotkey, +i, On
+    Hotkey, +o, On
+    Hotkey, +h, On
+    Hotkey, +j, On
+    Hotkey, +k, On
+    Hotkey, +l, On
+    Hotkey, +n, On
+    Hotkey, +m, On
+    Hotkey, +`,, On
+    Hotkey, +`., On
+
+    Hotkey, ^r, On
+    Hotkey, ^v, On
+    Hotkey, ^d, On
+    Hotkey, ^g, On
+    Hotkey, ^Space, On
+    Hotkey, ^Space Up, On
+    Hotkey, ^y, On
+    Hotkey, ^u, On
+    Hotkey, ^i, On
+    Hotkey, ^o, On
+    Hotkey, ^h, On
+    Hotkey, ^j, On
+    Hotkey, ^k, On
+    Hotkey, ^l, On
+    Hotkey, ^n, On
+    Hotkey, ^m, On
+    Hotkey, ^`,, On
+    Hotkey, ^`., On
+
+    Hotkey, r, On
+    Hotkey, v, On
+    Hotkey, d, On
+    Hotkey, g, On
+    Hotkey, Space, On
+    Hotkey, Space Up, On
+    Hotkey, y, On
+    Hotkey, u, On
+    Hotkey, i, On
+    Hotkey, o, On
+    Hotkey, h, On
+    Hotkey, j, On
+    Hotkey, k, On
+    Hotkey, l, On
+    Hotkey, n, On
+    Hotkey, m, On
+    Hotkey, `,, On
+    Hotkey, `., On
+}
+
+
+DeactivateMouse() {
+    mousejumpDeactivate()
+
+    Hotkey, f, Off
+    Hotkey, f Up, Off
+    Hotkey, t, Off
+    Hotkey, t Up, Off
+
+    Hotkey, +r, Off
+    Hotkey, +v, Off
+    Hotkey, +d, Off
+    Hotkey, +g, Off
+    Hotkey, +Space, Off
+    Hotkey, +Space Up, Off
+    Hotkey, +y, Off
+    Hotkey, +u, Off
+    Hotkey, +i, Off
+    Hotkey, +o, Off
+    Hotkey, +h, Off
+    Hotkey, +j, Off
+    Hotkey, +k, Off
+    Hotkey, +l, Off
+    Hotkey, +n, Off
+    Hotkey, +m, Off
+    Hotkey, +`,, Off
+    Hotkey, +`., Off
+
+    Hotkey, ^r, Off
+    Hotkey, ^v, Off
+    Hotkey, ^d, Off
+    Hotkey, ^g, Off
+    Hotkey, ^Space, Off
+    Hotkey, ^Space Up, Off
+    Hotkey, ^y, Off
+    Hotkey, ^u, Off
+    Hotkey, ^i, Off
+    Hotkey, ^o, Off
+    Hotkey, ^h, Off
+    Hotkey, ^j, Off
+    Hotkey, ^k, Off
+    Hotkey, ^l, Off
+    Hotkey, ^n, Off
+    Hotkey, ^m, Off
+    Hotkey, ^`,, Off
+    Hotkey, ^`., Off
+
+    Hotkey, r, Off
+    Hotkey, v, Off
+    Hotkey, d, Off
+    Hotkey, g, Off
+    Hotkey, Space, Off
+    Hotkey, Space Up, Off
+    Hotkey, y, Off
+    Hotkey, u, Off
+    Hotkey, i, Off
+    Hotkey, o, Off
+    Hotkey, h, Off
+    Hotkey, j, Off
+    Hotkey, k, Off
+    Hotkey, l, Off
+    Hotkey, n, Off
+    Hotkey, m, Off
+    Hotkey, `,, Off
+    Hotkey, `., Off
+}
+
+
+MouseDown() {
+    Click down
+}
+
+
+MouseUp() {
+    Click up
+}
+
+MiddleMouseDown() {
+    Click down middle
+}
+
+MiddleMouseUp() {
+    Click up middle
+}
+
+RightMouseDown() {
+    Click down right
+}
+
+RightMouseUp() {
+    Click up right
+}
+
+SlowLeftMove() {
+    global slowSpeed
+    MouseMove, -%slowSpeed%, 0, 0,R
+}
+
+SlowUpMove() {
+    global slowSpeed
+    MouseMove, 0, -%slowSpeed%, 0,R
+}
+
+SlowDownMove() {
+    global slowSpeed
+    MouseMove, 0, %slowSpeed%, 0,R
+}
+
+SlowRightMove() {
+    global slowSpeed
+    MouseMove, %slowSpeed%, 0, 0,R
+}
+
+MidLeftMove() {
+    global midSpeed
+    MouseMove, -%midSpeed%, 0, 0,R
+}
+
+MidUpMove() {
+    global midSpeed
+    MouseMove, 0, -%midSpeed%, 0,R
+}
+
+MidDownMove() {
+    global midSpeed
+    MouseMove, 0, %midSpeed%, 0,R
+}
+
+MidRightMove() {
+    global midSpeed
+    MouseMove, %midSpeed%, 0, 0,R
+}
+
+FastLeftMove() {
+    global fastSpeed
+    MouseMove, -%fastSpeed%, 0, 0,R
+    send {control down}{control up}
+}
+
+FastUpMove() {
+    global fastSpeed
+    MouseMove, 0, -%fastSpeed%, 0,R
+    send {control down}{control up}
+}
+
+FastDownMove() {
+    global fastSpeed
+    MouseMove, 0, %fastSpeed%, 0,R
+    send {control down}{control up}
+}
+
+FastRightMove() {
+    global fastSpeed
+    MouseMove, %fastSpeed%, 0, 0,R
+    send {control down}{control up}
+}
+
+SendScrollUp() {
+    click WheelUp
+}
+
+SendScrollDown() {
+    click WheelDown
+}
+
+SendScrollLeft() {
+    click WheelLeft
+}
+
+SendScrollRight() {
+    click WheelRight
+}

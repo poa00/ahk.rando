@@ -1,0 +1,140 @@
+; Set up the initial state
+#NoTrayIcon
+global mode := "insert"
+
+; Create the gui
+Gui, MyGui11:Margin, 0, 0
+Gui, MyGui12:Margin, 0, 0
+Gui, MyGui13:Margin, 0, 0
+Gui, MyGui14:Margin, 0, 0
+Gui, MyGui21:Margin, 0, 0
+Gui, MyGui22:Margin, 0, 0
+Gui, MyGui23:Margin, 0, 0
+Gui, MyGui24:Margin, 0, 0
+Gui, MyGui31:Margin, 0, 0
+Gui, MyGui32:Margin, 0, 0
+Gui, MyGui33:Margin, 0, 0
+Gui, MyGui34:Margin, 0, 0
+
+Gui, MyGui11:Add, Edit, vVisibleText  -E0x200, %mode%
+Gui, MyGui12:Add, Edit, vVisibleText  -E0x200, %mode%
+Gui, MyGui13:Add, Edit, vVisibleText  -E0x200, %mode%
+Gui, MyGui14:Add, Edit, vVisibleText  -E0x200, %mode%
+Gui, MyGui21:Add, Edit, vVisibleText  -E0x200, %mode%
+Gui, MyGui22:Add, Edit, vVisibleText  -E0x200, %mode%
+Gui, MyGui23:Add, Edit, vVisibleText  -E0x200, %mode%
+Gui, MyGui24:Add, Edit, vVisibleText  -E0x200, %mode%
+Gui, MyGui31:Add, Edit, vVisibleText  -E0x200, %mode%
+Gui, MyGui32:Add, Edit, vVisibleText  -E0x200, %mode%
+Gui, MyGui33:Add, Edit, vVisibleText  -E0x200, %mode%
+Gui, MyGui34:Add, Edit, vVisibleText  -E0x200, %mode%
+
+Gui, MyGui11:+ToolWindow
+Gui, MyGui12:+ToolWindow
+Gui, MyGui13:+ToolWindow
+Gui, MyGui14:+ToolWindow
+Gui, MyGui21:+ToolWindow
+Gui, MyGui22:+ToolWindow
+Gui, MyGui23:+ToolWindow
+Gui, MyGui24:+ToolWindow
+Gui, MyGui31:+ToolWindow
+Gui, MyGui32:+ToolWindow
+Gui, MyGui33:+ToolWindow
+Gui, MyGui34:+ToolWindow
+
+Gui, MyGui11:-Caption
+Gui, MyGui12:-Caption
+Gui, MyGui13:-Caption
+Gui, MyGui14:-Caption
+Gui, MyGui21:-Caption
+Gui, MyGui22:-Caption
+Gui, MyGui23:-Caption
+Gui, MyGui24:-Caption
+Gui, MyGui31:-Caption
+Gui, MyGui32:-Caption
+Gui, MyGui33:-Caption
+Gui, MyGui34:-Caption
+
+Gui, MyGui11:+Owner
+Gui, MyGui12:+Owner
+Gui, MyGui13:+Owner
+Gui, MyGui14:+Owner
+Gui, MyGui21:+Owner
+Gui, MyGui22:+Owner
+Gui, MyGui23:+Owner
+Gui, MyGui24:+Owner
+Gui, MyGui31:+Owner
+Gui, MyGui32:+Owner
+Gui, MyGui33:+Owner
+Gui, MyGui34:+Owner
+
+buttonWidth := 50
+buttonHeight := 20
+s1w := 1920
+s1h := 1080
+s2w := 1920
+s2h := 1080
+s3w := 1440
+s3h := 900
+x1 := s1w - buttonWidth
+x2 := s1w
+x3 := s1w + s2w - buttonWidth
+x4 := s1w + s2w
+x5 := s1w + s2w + s3w - buttonWidth
+y1 := s1h - buttonHeight
+y2 := s2h - buttonHeight
+y3 := s3h - buttonHeight
+Gui, MyGui11:Show, x0 y0 w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui12:Show, x%x1% y0 w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui13:Show, x0 y%y1% w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui14:Show, x%x1% y%y1% w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui21:Show, x%x2% y0 w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui22:Show, x%x3% y0 w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui23:Show, x%x2% y%y2% w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui24:Show, x%x3% y%y2% w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui31:Show, x%x4% y0 w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui32:Show, x%x5% y0 w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui33:Show, x%x4% y%y3% w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui34:Show, x%x5% y%y3% w%buttonWidth% h%buttonHeight%, Simple Input Example
+
+
+UpdateGui(mode, colour) {
+    GuiControl, MyGui11:Text, VisibleText, %mode%
+    GuiControl, MyGui12:Text, VisibleText, %mode%
+    GuiControl, MyGui13:Text, VisibleText, %mode%
+    GuiControl, MyGui14:Text, VisibleText, %mode%
+    GuiControl, MyGui21:Text, VisibleText, %mode%
+    GuiControl, MyGui22:Text, VisibleText, %mode%
+    GuiControl, MyGui23:Text, VisibleText, %mode%
+    GuiControl, MyGui24:Text, VisibleText, %mode%
+    GuiControl, MyGui31:Text, VisibleText, %mode%
+    GuiControl, MyGui32:Text, VisibleText, %mode%
+    GuiControl, MyGui33:Text, VisibleText, %mode%
+    GuiControl, MyGui34:Text, VisibleText, %mode%
+
+    Gui, MyGui11:Color,, %colour%
+    Gui, MyGui12:Color,, %colour%
+    Gui, MyGui13:Color,, %colour%
+    Gui, MyGui14:Color,, %colour%
+    Gui, MyGui21:Color,, %colour%
+    Gui, MyGui22:Color,, %colour%
+    Gui, MyGui23:Color,, %colour%
+    Gui, MyGui24:Color,, %colour%
+    Gui, MyGui31:Color,, %colour%
+    Gui, MyGui32:Color,, %colour%
+    Gui, MyGui33:Color,, %colour%
+    Gui, MyGui34:Color,, %colour%
+
+    GuiControl, MyGui11:Move, VisibleText, W1300
+    GuiControl, MyGui12:Move, VisibleText, W1300
+    GuiControl, MyGui13:Move, VisibleText, W1300
+    GuiControl, MyGui14:Move, VisibleText, W1300
+    GuiControl, MyGui21:Move, VisibleText, W1300
+    GuiControl, MyGui22:Move, VisibleText, W1300
+    GuiControl, MyGui23:Move, VisibleText, W1300
+    GuiControl, MyGui24:Move, VisibleText, W1300
+    GuiControl, MyGui31:Move, VisibleText, W1300
+    GuiControl, MyGui32:Move, VisibleText, W1300
+    GuiControl, MyGui33:Move, VisibleText, W1300
+    GuiControl, MyGui34:Move, VisibleText, W1300
+}

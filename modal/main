@@ -1,0 +1,38 @@
+#Include %A_ScriptDir%\modal\gui
+#Include %A_ScriptDir%\modal\change
+#Include %A_ScriptDir%\modal\vim-keys
+#Include %A_ScriptDir%\modal\mouse-keys
+
+ChangeMode(newMode) {
+    global mode
+    if (mode == "vim") {
+        DeactivateVimKeys()
+    } else if (mode == "mouse") {
+        DeactivateMouse()
+    } else if (mode == "change") {
+        DeactivateChange()
+    }
+
+    if (newMode == "vim") {
+        UpdateGui("", "red")
+        ActivateVimKeys()
+    } else if (newMode == "mouse") {
+        UpdateGui("", "green")
+        ActivateMouse()
+    } else if (newMode == "change") {
+        UpdateGui("", "black")
+        ActivateChange()
+    } else if (newMode == "insert") {
+        UpdateGui("", "white")
+    }
+
+    global mode := newMode
+    return newMode
+}
+
+SendEscape() {
+    send {escape down}{escape up}
+}
+
+Hotkey, SC00F, GoToChange
+Hotkey, SC00F, On
