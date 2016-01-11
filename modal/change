@@ -19,7 +19,7 @@ DeactivateChange() {
     Hotkey, l, Off
     Hotkey, SC027, Off
     Hotkey, +SC027, Off
-    Hotkey, SC00F, On
+;    Hotkey, SC00F, On
 }
 
 GoToChangeWithEscape() {

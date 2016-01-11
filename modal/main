@@ -34,5 +34,4 @@ SendEscape() {
     send {escape down}{escape up}
 }
 
-Hotkey, SC00F, GoToChange
-Hotkey, SC00F, On
+CapsLock & Tab::GoToChange()
