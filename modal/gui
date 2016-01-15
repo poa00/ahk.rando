@@ -71,11 +71,11 @@ Gui, MyGui34:+Owner
 buttonWidth := 50
 buttonHeight := 20
 s1w := 1920
-s1h := 1080
+s1h := 1079
 s2w := 1920
-s2h := 1080
-s3w := 1440
-s3h := 900
+s2h := 1079
+s3w := 1439
+s3h := 899
 x1 := s1w - buttonWidth
 x2 := s1w
 x3 := s1w + s2w - buttonWidth
@@ -84,16 +84,16 @@ x5 := s1w + s2w + s3w - buttonWidth
 y1 := s1h - buttonHeight
 y2 := s2h - buttonHeight
 y3 := s3h - buttonHeight
-Gui, MyGui11:Show, x0 y0 w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui12:Show, x%x1% y0 w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui13:Show, x0 y%y1% w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui11:Show, x1 y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui12:Show, x%x1% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui13:Show, x1 y%y1% w%buttonWidth% h%buttonHeight%, Simple Input Example
 Gui, MyGui14:Show, x%x1% y%y1% w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui21:Show, x%x2% y0 w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui22:Show, x%x3% y0 w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui21:Show, x%x2% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui22:Show, x%x3% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
 Gui, MyGui23:Show, x%x2% y%y2% w%buttonWidth% h%buttonHeight%, Simple Input Example
 Gui, MyGui24:Show, x%x3% y%y2% w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui31:Show, x%x4% y0 w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui32:Show, x%x5% y0 w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui31:Show, x%x4% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
+Gui, MyGui32:Show, x%x5% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
 Gui, MyGui33:Show, x%x4% y%y3% w%buttonWidth% h%buttonHeight%, Simple Input Example
 Gui, MyGui34:Show, x%x5% y%y3% w%buttonWidth% h%buttonHeight%, Simple Input Example
 
