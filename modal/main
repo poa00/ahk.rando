@@ -34,4 +34,4 @@ SendEscape() {
     send {escape down}{escape up}
 }
 
-Shift & Tab::GoToChange()
+Shift & CapsLock::GoToChange()
