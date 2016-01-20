@@ -36,4 +36,3 @@ SendEscape() {
 
 Shift & CapsLock::GoToChange()
 Control & CapsLock::GoToChange()
-Shift & CapsLock::GoToChange()
