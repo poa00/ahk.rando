@@ -243,74 +243,89 @@ mousejumpSaveM() {
 mousejumpLoad7() {
 	global savedPositions
 	MouseMove, savedPositions.7x, savedPositions.7y
+    Click
 }
 
 mousejumpLoad8() {
 	global savedPositions
 	MouseMove, savedPositions.8x, savedPositions.8y
+    Click
 }
 
 mousejumpLoad9() {
 	global savedPositions
 	MouseMove, savedPositions.9x, savedPositions.9y
+    Click
 }
 
 mousejumpLoad0() {
 	global savedPositions
 	MouseMove, savedPositions.0x, savedPositions.0y
+    Click
 }
 
 mousejumpLoadY() {
 	global savedPositions
 	MouseMove, savedPositions.yx, savedPositions.yy
+    Click
 }
 
 mousejumpLoadU() {
 	global savedPositions
 	MouseMove, savedPositions.ux, savedPositions.uy
+    Click
 }
 
 mousejumpLoadI() {
 	global savedPositions
 	MouseMove, savedPositions.ix, savedPositions.iy
+    Click
 }
 
 mousejumpLoadO() {
 	global savedPositions
 	MouseMove, savedPositions.ox, savedPositions.oy
+    Click
 }
 
 mousejumpLoadP() {
 	global savedPositions
 	MouseMove, savedPositions.px, savedPositions.py
+    Click
 }
 
 mousejumpLoadH() {
 	global savedPositions
 	MouseMove, savedPositions.hx, savedPositions.hy
+    Click
 }
 
 mousejumpLoadJ() {
 	global savedPositions
 	MouseMove, savedPositions.jx, savedPositions.jy
+    Click
 }
 
 mousejumpLoadK() {
 	global savedPositions
 	MouseMove, savedPositions.kx, savedPositions.ky
+    Click
 }
 
 mousejumpLoadL() {
 	global savedPositions
 	MouseMove, savedPositions.lx, savedPositions.ly
+    Click
 }
 
 mousejumpLoadN() {
 	global savedPositions
 	MouseMove, savedPositions.nx, savedPositions.ny
+    Click
 }
 
 mousejumpLoadM() {
 	global savedPositions
 	MouseMove, savedPositions.mx, savedPositions.my
+    Click
 }
