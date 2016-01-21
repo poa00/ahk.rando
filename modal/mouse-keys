@@ -15,8 +15,10 @@ ActivateMouse() {
     Hotkey, t, MiddleMouseDown
     Hotkey, t Up, MiddleMouseUp
 
-    Hotkey, p, GoInsert
+    Hotkey, s, GoInsert
+    Hotkey, +s, GoInsert
     Hotkey, a, GoVim
+    Hotkey, +a, GoVim
 
     Hotkey, r, SendScrollUp
     Hotkey, v, SendScrollDown
@@ -80,8 +82,10 @@ ActivateMouse() {
     Hotkey, t, On
     Hotkey, t Up, On
 
-    Hotkey, p, On
+    Hotkey, s, On
+    Hotkey, +s, On
     Hotkey, a, On
+    Hotkey, +a, On
     
     Hotkey, +r, On
     Hotkey, +v, On
@@ -150,8 +154,10 @@ DeactivateMouse() {
     Hotkey, t, Off
     Hotkey, t Up, Off
 
-    Hotkey, p, Off
+    Hotkey, s, Off
+    Hotkey, +s, Off
     Hotkey, a, Off
+    Hotkey, +a, Off
 
     Hotkey, +r, Off
     Hotkey, +v, Off
