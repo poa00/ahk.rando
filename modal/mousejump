@@ -1,5 +1,5 @@
-global savedPositions := {}
-
+global savedPositions := {} 
+CoordMode, Mouse, Screen
 savedPositions.7x := 0
 savedPositions.8x := 0
 savedPositions.9x := 0

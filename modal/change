@@ -2,9 +2,15 @@ ActivateChange() {
     Hotkey, j, GoToInsert
     Hotkey, k, GoToNormal
     Hotkey, l, GoToMouse
+    Hotkey, +j, GoToInsert
+    Hotkey, +k, GoToNormal
+    Hotkey, +l, GoToMouse
     Hotkey, SC027, SendTab
     Hotkey, +SC027, SendShiftTab
 
+    Hotkey, +j, On
+    Hotkey, +k, On
+    Hotkey, +l, On
     Hotkey, j, On
     Hotkey, k, On
     Hotkey, l, On
@@ -14,6 +20,9 @@ ActivateChange() {
 }
 
 DeactivateChange() {
+    Hotkey, +j, Off
+    Hotkey, +k, Off
+    Hotkey, +l, Off
     Hotkey, j, Off
     Hotkey, k, Off
     Hotkey, l, Off

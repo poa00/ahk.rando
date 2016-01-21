@@ -34,5 +34,9 @@ SendEscape() {
     send {escape down}{escape up}
 }
 
-Shift & CapsLock::GoToChange()
-Control & CapsLock::GoToChange()
+Shift & CapsLock::goMouse()
+Control & CapsLock::goMouse()
+
+GoMouse() {
+    changeMode("mouse")
+}

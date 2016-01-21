@@ -15,6 +15,9 @@ ActivateMouse() {
     Hotkey, t, MiddleMouseDown
     Hotkey, t Up, MiddleMouseUp
 
+    Hotkey, p, GoInsert
+    Hotkey, a, GoVim
+
     Hotkey, r, SendScrollUp
     Hotkey, v, SendScrollDown
     Hotkey, d, SendScrollLeft
@@ -77,6 +80,9 @@ ActivateMouse() {
     Hotkey, t, On
     Hotkey, t Up, On
 
+    Hotkey, p, On
+    Hotkey, a, On
+    
     Hotkey, +r, On
     Hotkey, +v, On
     Hotkey, +d, On
@@ -143,6 +149,9 @@ DeactivateMouse() {
     Hotkey, f Up, Off
     Hotkey, t, Off
     Hotkey, t Up, Off
+
+    Hotkey, p, Off
+    Hotkey, a, Off
 
     Hotkey, +r, Off
     Hotkey, +v, Off
@@ -306,4 +315,12 @@ SendScrollLeft() {
 
 SendScrollRight() {
     click WheelRight
+}
+
+GoInsert() {
+    changeMode("insert")
+}
+
+GoVim() {
+    changeMode("vim")
 }
