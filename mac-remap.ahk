@@ -10,6 +10,9 @@ Send, {CTRLDOWN}{CTRLUP}{ALTDOWN}{ALTUP}{WINDOWN}{WINUP}{SHIFTDOWN}{SHIFTUP}
   Send, {Raw}#
 Return
 
+; right-alt to tab
+!RAlt::Send, {tab}
+
 ; at to double quote
 +'::"
 

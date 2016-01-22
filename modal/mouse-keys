@@ -10,8 +10,6 @@ global fastSpeed := 300
 ActivateMouse() {
     mousejumpActivate()
 
-    Hotkey, tab, SendTab
-
     Hotkey, f, RightMouseDown
     Hotkey, f Up, RightMouseUp
     Hotkey, t, MiddleMouseDown
@@ -150,8 +148,6 @@ ActivateMouse() {
 
 DeactivateMouse() {
     mousejumpDeactivate()
-
-    Hotkey, tab, GoMouseMove
 
     Hotkey, f, Off
     Hotkey, f Up, Off
@@ -337,4 +333,8 @@ GoVim() {
 
 GoMouseMove() {
     changeMode("mouse")
+}
+
+SendTabChar() {
+    Send, {tab}
 }
