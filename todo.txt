@@ -1,0 +1,2 @@
+- make a hotkey and mode for completely deactivating everything
+- allow the saved mouse positions to be saved between sessions
