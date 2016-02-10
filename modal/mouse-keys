@@ -3,9 +3,8 @@
 
 global moveMouseThreads := 0
 global slowSpeed := 8
-global midSpeed := 30
-global fastSpeed := 300
-
+global midSpeed := 20
+global fastSpeed := 200
 
 ActivateMouse() {
     mousejumpActivate()

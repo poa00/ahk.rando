@@ -2,9 +2,6 @@
 global mode
 Capslock::SendEscape()
 ^!r::Reload
-$up::
-  Send, {tab}
-Return
 $tab::
   ChangeMode("mouse")
 Return

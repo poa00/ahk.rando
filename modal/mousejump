@@ -139,6 +139,7 @@ mousejumpSave7() {
 	MouseGetPos, xvar, yvar
 	savedPositions.7x := xvar
 	savedPositions.7y := yvar
+    Click
 }
 
 mousejumpSave8() {
@@ -146,6 +147,7 @@ mousejumpSave8() {
 	MouseGetPos, xvar, yvar
 	savedPositions.8x := xvar
 	savedPositions.8y := yvar
+    Click
 }
 
 mousejumpSave9() {
@@ -153,6 +155,7 @@ mousejumpSave9() {
 	MouseGetPos, xvar, yvar
 	savedPositions.9x := xvar
 	savedPositions.9y := yvar
+    Click
 }
 
 mousejumpSave0() {
@@ -160,6 +163,7 @@ mousejumpSave0() {
 	MouseGetPos, xvar, yvar
 	savedPositions.0x := xvar
 	savedPositions.0y := yvar
+    Click
 }
 
 mousejumpSaveY() {
@@ -167,6 +171,7 @@ mousejumpSaveY() {
 	MouseGetPos, xvar, yvar
 	savedPositions.yx := xvar
 	savedPositions.yy := yvar
+    Click
 }
 
 mousejumpSaveU() {
@@ -174,6 +179,7 @@ mousejumpSaveU() {
 	MouseGetPos, xvar, yvar
 	savedPositions.ux := xvar
 	savedPositions.uy := yvar
+    Click
 }
 
 mousejumpSaveI() {
@@ -181,6 +187,7 @@ mousejumpSaveI() {
 	MouseGetPos, xvar, yvar
 	savedPositions.ix := xvar
 	savedPositions.iy := yvar
+    Click
 }
 
 mousejumpSaveO() {
@@ -188,6 +195,7 @@ mousejumpSaveO() {
 	MouseGetPos, xvar, yvar
 	savedPositions.ox := xvar
 	savedPositions.oy := yvar
+    Click
 }
 
 mousejumpSaveP() {
@@ -195,6 +203,7 @@ mousejumpSaveP() {
 	MouseGetPos, xvar, yvar
 	savedPositions.px := xvar
 	savedPositions.py := yvar
+    Click
 }
 
 mousejumpSaveH() {
@@ -202,6 +211,7 @@ mousejumpSaveH() {
 	MouseGetPos, xvar, yvar
 	savedPositions.hx := xvar
 	savedPositions.hy := yvar
+    Click
 }
 
 mousejumpSaveJ() {
@@ -209,6 +219,7 @@ mousejumpSaveJ() {
 	MouseGetPos, xvar, yvar
 	savedPositions.jx := xvar
 	savedPositions.jy := yvar
+    Click
 }
 
 mousejumpSaveK() {
@@ -216,6 +227,7 @@ mousejumpSaveK() {
 	MouseGetPos, xvar, yvar
 	savedPositions.kx := xvar
 	savedPositions.ky := yvar
+    Click
 }
 
 mousejumpSaveL() {
@@ -223,6 +235,7 @@ mousejumpSaveL() {
 	MouseGetPos, xvar, yvar
 	savedPositions.lx := xvar
 	savedPositions.ly := yvar
+    Click
 }
 
 mousejumpSaveN() {
@@ -230,6 +243,7 @@ mousejumpSaveN() {
 	MouseGetPos, xvar, yvar
 	savedPositions.nx := xvar
 	savedPositions.ny := yvar
+    Click
 }
 
 mousejumpSaveM() {
@@ -237,6 +251,7 @@ mousejumpSaveM() {
 	MouseGetPos, xvar, yvar
 	savedPositions.mx := xvar
 	savedPositions.my := yvar
+    Click
 }
 
 
