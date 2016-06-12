@@ -3,7 +3,7 @@ Send, {CTRLDOWN}{CTRLUP}{ALTDOWN}{ALTUP}{WINDOWN}{WINUP}{SHIFTDOWN}{SHIFTUP}
 ; Windows to mac remapping
 
 ; double quote to at
-+2::@
+!2::@
 
 ; alt-3 to hash 
 !3::
@@ -12,9 +12,10 @@ Return
 
 ; right-alt to tab
 LControl & RAlt::Send, {tab}
+LControl & Alt::Send, {tab}
 
 ; at to double quote
-+'::"
+; +'::"
 
 ; hash to backslash
 #::\
@@ -23,10 +24,15 @@ LControl & RAlt::Send, {tab}
 ~::\
 
 ; pipe to tilde
-|::~
+; |::~
++`::~
 
 ; backslash to backtick
-\::`
+; \::`
+
+; swap hyphen and underscore
++-::Send -
+-::_
 
 ; Reload this script
 ^+r::
