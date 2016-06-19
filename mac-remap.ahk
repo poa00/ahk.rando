@@ -34,6 +34,10 @@ LControl & Alt::Send, {tab}
 +-::Send -
 -::_
 
+; swap colon and semicolon
+$`;::Send `:
+$+`;::Send `;
+
 ; Reload this script
 ^+r::
   Reload
