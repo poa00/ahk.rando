@@ -12,7 +12,7 @@ Return
 
 ; right-alt to tab
 LControl & RAlt::Send, {tab}
-LControl & Alt::Send, {tab}
+; LControl & Alt::Send, {tab}
 
 ; at to double quote
 ; +'::"
@@ -24,7 +24,7 @@ LControl & Alt::Send, {tab}
 ~::\
 
 ; pipe to tilde
-; |::~
+|::~
 +`::~
 
 ; backslash to backtick

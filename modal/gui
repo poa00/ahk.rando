@@ -1,5 +1,4 @@
 ; Set up the initial state
-#NoTrayIcon
 global mode := "insert"
 
 ; Create the gui
