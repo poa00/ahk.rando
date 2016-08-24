@@ -1,9 +1,15 @@
 ; Switch mode
 global mode
-Capslock::SendEscape()
 ^!r::Reload
+$`::
+  ChangeMode("vim")
+Return
 $tab::
   ChangeMode("mouse")
+Return
+CapsLock::
+  ChangeMode("insert")
+  SendEscape()
 Return
 
 ^!i::
