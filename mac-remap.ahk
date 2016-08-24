@@ -27,7 +27,7 @@ LControl & RAlt::Send, {tab}
 |::~
 
 ; backslash to backtick
-\::Send ``
+$\::Send ``
 
 ; swap hyphen and underscore
 +-::Send -
