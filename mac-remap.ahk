@@ -44,3 +44,9 @@ $+`;::Send `;
   MsgBox, 4,, The script could not be reloaded. Would you like to open it for editing?
   IfMsgBox, Yes, Edit
 Return
+
+!t::
+  WinSet, Style, ^0xC00000, A
+  WinSet, Style, ^0x840000, A
+  WinSet, Style, ^0xC40000, A
+Return
