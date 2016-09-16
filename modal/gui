@@ -28,6 +28,19 @@ Gui, MyGui32:Add, Edit, vVisibleText  -E0x200, %mode%
 Gui, MyGui33:Add, Edit, vVisibleText  -E0x200, %mode%
 Gui, MyGui34:Add, Edit, vVisibleText  -E0x200, %mode%
 
+Gui, MyGui11:+AlwaysOnTop
+Gui, MyGui12:+AlwaysOnTop
+Gui, MyGui13:+AlwaysOnTop
+Gui, MyGui14:+AlwaysOnTop
+Gui, MyGui21:+AlwaysOnTop
+Gui, MyGui22:+AlwaysOnTop
+Gui, MyGui23:+AlwaysOnTop
+Gui, MyGui24:+AlwaysOnTop
+Gui, MyGui31:+AlwaysOnTop
+Gui, MyGui32:+AlwaysOnTop
+Gui, MyGui33:+AlwaysOnTop
+Gui, MyGui34:+AlwaysOnTop
+
 Gui, MyGui11:+ToolWindow
 Gui, MyGui12:+ToolWindow
 Gui, MyGui13:+ToolWindow
@@ -67,8 +80,8 @@ Gui, MyGui32:+Owner
 Gui, MyGui33:+Owner
 Gui, MyGui34:+Owner
 
-buttonWidth := 50
-buttonHeight := 20
+buttonWidth := 500
+buttonHeight := 2
 s1w := 1920
 s1h := 1079
 s2w := 1920
