@@ -28,6 +28,19 @@ Gui, MyGui32:Add, Edit, vVisibleText  -E0x200, %mode%
 Gui, MyGui33:Add, Edit, vVisibleText  -E0x200, %mode%
 Gui, MyGui34:Add, Edit, vVisibleText  -E0x200, %mode%
 
+Gui, MyGui11:+E0x08000000
+Gui, MyGui12:+E0x08000000
+Gui, MyGui13:+E0x08000000
+Gui, MyGui14:+E0x08000000
+Gui, MyGui21:+E0x08000000
+Gui, MyGui22:+E0x08000000
+Gui, MyGui23:+E0x08000000
+Gui, MyGui24:+E0x08000000
+Gui, MyGui31:+E0x08000000
+Gui, MyGui32:+E0x08000000
+Gui, MyGui33:+E0x08000000
+Gui, MyGui34:+E0x08000000
+
 Gui, MyGui11:+AlwaysOnTop
 Gui, MyGui12:+AlwaysOnTop
 Gui, MyGui13:+AlwaysOnTop
@@ -80,88 +93,115 @@ Gui, MyGui32:+Owner
 Gui, MyGui33:+Owner
 Gui, MyGui34:+Owner
 
-; Get monitor measurements
-SysGet, Mon1, Monitor, 1
-s1w := Mon1Right - Mon1Left ; 1920
-s1h := Mon1Bottom - Mon1Top ; 1079
-s2w := 1920
-s2h := 1079
-s3w := 1439
-s3h := 899
-
-SysGet, MonCount, MonitorCount
-if MonCount > 1
+WM_MOUSEACTIVATE(wParam, lParam)
 {
-    SysGet, Mon2, Monitor, 2
-    s2w := Mon2Right - Mon2Left ; 1920
-    s2h := Mon2Bottom - Mon2Top ; 1079
-    SysGet, Mon3, Monitor, 3
-    s3w := Mon3Right - Mon3Left ; 1920
-    s3h := Mon3Bottom - Mon3Top ; 1079
+       Return 4 ;MA_NOACTIVATEANDEAT
+       
 }
 
-buttonWidth := 600
-buttonHeight := 5
-
-x1 := s1w - 2 * buttonWidth - 1
-x2 := s1w
-x3 := s1w + s2w - 2 * buttonWidth - 1
-x4 := s1w + s2w
-x5 := s1w + s2w + s3w - 2 * buttonWidth - 1
-y1 := s1h - 3 * buttonHeight
-y2 := s2h - buttonHeight
-y3 := s3h - buttonHeight
-Gui, MyGui11:Show, x1 y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui12:Show, x%x1% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui13:Show, x1 y%y1% w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui14:Show, x%x1% y%y1% w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui21:Show, x%x2% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui22:Show, x%x3% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui23:Show, x%x2% y%y2% w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui24:Show, x%x3% y%y2% w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui31:Show, x%x4% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui32:Show, x%x5% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui33:Show, x%x4% y%y3% w%buttonWidth% h%buttonHeight%, Simple Input Example
-Gui, MyGui34:Show, x%x5% y%y3% w%buttonWidth% h%buttonHeight%, Simple Input Example
-
-
 UpdateGui(mode, colour) {
-    GuiControl, MyGui11:Text, VisibleText, %mode%
-    GuiControl, MyGui12:Text, VisibleText, %mode%
-    GuiControl, MyGui13:Text, VisibleText, %mode%
-    GuiControl, MyGui14:Text, VisibleText, %mode%
-    GuiControl, MyGui21:Text, VisibleText, %mode%
-    GuiControl, MyGui22:Text, VisibleText, %mode%
-    GuiControl, MyGui23:Text, VisibleText, %mode%
-    GuiControl, MyGui24:Text, VisibleText, %mode%
-    GuiControl, MyGui31:Text, VisibleText, %mode%
-    GuiControl, MyGui32:Text, VisibleText, %mode%
-    GuiControl, MyGui33:Text, VisibleText, %mode%
-    GuiControl, MyGui34:Text, VisibleText, %mode%
+    WinGet, active_id, ID, A
 
-    Gui, MyGui11:Color,, %colour%
-    Gui, MyGui12:Color,, %colour%
-    Gui, MyGui13:Color,, %colour%
-    Gui, MyGui14:Color,, %colour%
-    Gui, MyGui21:Color,, %colour%
-    Gui, MyGui22:Color,, %colour%
-    Gui, MyGui23:Color,, %colour%
-    Gui, MyGui24:Color,, %colour%
-    Gui, MyGui31:Color,, %colour%
-    Gui, MyGui32:Color,, %colour%
-    Gui, MyGui33:Color,, %colour%
-    Gui, MyGui34:Color,, %colour%
+    if ("" . colour = "white")
+    {
+        Gui, MyGui11:Show, x0 y0 w0 h0, aaa
+        Gui, MyGui12:Show, x0 y0 w0 h0, aaa
+        Gui, MyGui13:Show, x0 y0 w0 h0, aaa
+        Gui, MyGui14:Show, x0 y0 w0 h0, aaa
+        Gui, MyGui21:Show, x0 y0 w0 h0, aaa
+        Gui, MyGui22:Show, x0 y0 w0 h0, aaa
+        Gui, MyGui23:Show, x0 y0 w0 h0, aaa
+        Gui, MyGui24:Show, x0 y0 w0 h0, aaa
+        Gui, MyGui31:Show, x0 y0 w0 h0, aaa
+        Gui, MyGui32:Show, x0 y0 w0 h0, aaa
+        Gui, MyGui33:Show, x0 y0 w0 h0, aaa
+        Gui, MyGui34:Show, x0 y0 w0 h0, aaa
+    }
+    else
+    {
+        ; Get monitor measurements
+        SysGet, Mon1, Monitor, 1
+        s1w := Mon1Right - Mon1Left ; 1920
+        s1h := Mon1Bottom - Mon1Top ; 1079
+        s2w := 1920
+        s2h := 1079
+        s3w := 1439
+        s3h := 899
 
-    GuiControl, MyGui11:Move, VisibleText, W1300
-    GuiControl, MyGui12:Move, VisibleText, W1300
-    GuiControl, MyGui13:Move, VisibleText, W1300
-    GuiControl, MyGui14:Move, VisibleText, W1300
-    GuiControl, MyGui21:Move, VisibleText, W1300
-    GuiControl, MyGui22:Move, VisibleText, W1300
-    GuiControl, MyGui23:Move, VisibleText, W1300
-    GuiControl, MyGui24:Move, VisibleText, W1300
-    GuiControl, MyGui31:Move, VisibleText, W1300
-    GuiControl, MyGui32:Move, VisibleText, W1300
-    GuiControl, MyGui33:Move, VisibleText, W1300
-    GuiControl, MyGui34:Move, VisibleText, W1300
+        SysGet, MonCount, MonitorCount
+        if MonCount > 1
+        {
+            SysGet, Mon2, Monitor, 2
+            s2w := Mon2Right - Mon2Left ; 1920
+            s2h := Mon2Bottom - Mon2Top ; 1079
+            SysGet, Mon3, Monitor, 3
+            s3w := Mon3Right - Mon3Left ; 1920
+            s3h := Mon3Bottom - Mon3Top ; 1079
+        }
+
+        buttonWidth := 600
+        buttonHeight := 7
+
+        x1 := s1w - 2 * buttonWidth - 1
+        x2 := s1w
+        x3 := s1w + s2w - 2 * buttonWidth - 1
+        x4 := s1w + s2w
+        x5 := s1w + s2w + s3w - 2 * buttonWidth - 1
+        y1 := s1h - 3 * buttonHeight
+        y2 := s2h - buttonHeight
+        y3 := s3h - buttonHeight
+
+        Gui, MyGui11:Show, x1 y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
+        Gui, MyGui12:Show, x%x1% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
+        Gui, MyGui13:Show, x1 y%y1% w%buttonWidth% h%buttonHeight%, Simple Input Example
+        Gui, MyGui14:Show, x%x1% y%y1% w%buttonWidth% h%buttonHeight%, Simple Input Example
+        Gui, MyGui21:Show, x%x2% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
+        Gui, MyGui22:Show, x%x3% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
+        Gui, MyGui23:Show, x%x2% y%y2% w%buttonWidth% h%buttonHeight%, Simple Input Example
+        Gui, MyGui24:Show, x%x3% y%y2% w%buttonWidth% h%buttonHeight%, Simple Input Example
+        Gui, MyGui31:Show, x%x4% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
+        Gui, MyGui32:Show, x%x5% y1 w%buttonWidth% h%buttonHeight%, Simple Input Example
+        Gui, MyGui33:Show, x%x4% y%y3% w%buttonWidth% h%buttonHeight%, Simple Input Example
+        Gui, MyGui34:Show, x%x5% y%y3% w%buttonWidth% h%buttonHeight%, Simple Input Example
+
+        GuiControl, MyGui11:Text, VisibleText, %mode%
+        GuiControl, MyGui12:Text, VisibleText, %mode%
+        GuiControl, MyGui13:Text, VisibleText, %mode%
+        GuiControl, MyGui14:Text, VisibleText, %mode%
+        GuiControl, MyGui21:Text, VisibleText, %mode%
+        GuiControl, MyGui22:Text, VisibleText, %mode%
+        GuiControl, MyGui23:Text, VisibleText, %mode%
+        GuiControl, MyGui24:Text, VisibleText, %mode%
+        GuiControl, MyGui31:Text, VisibleText, %mode%
+        GuiControl, MyGui32:Text, VisibleText, %mode%
+        GuiControl, MyGui33:Text, VisibleText, %mode%
+        GuiControl, MyGui34:Text, VisibleText, %mode%
+
+        Gui, MyGui11:Color,, %colour%
+        Gui, MyGui12:Color,, %colour%
+        Gui, MyGui13:Color,, %colour%
+        Gui, MyGui14:Color,, %colour%
+        Gui, MyGui21:Color,, %colour%
+        Gui, MyGui22:Color,, %colour%
+        Gui, MyGui23:Color,, %colour%
+        Gui, MyGui24:Color,, %colour%
+        Gui, MyGui31:Color,, %colour%
+        Gui, MyGui32:Color,, %colour%
+        Gui, MyGui33:Color,, %colour%
+        Gui, MyGui34:Color,, %colour%
+
+        GuiControl, MyGui11:Move, VisibleText, W1300
+        GuiControl, MyGui12:Move, VisibleText, W1300
+        GuiControl, MyGui13:Move, VisibleText, W1300
+        GuiControl, MyGui14:Move, VisibleText, W1300
+        GuiControl, MyGui21:Move, VisibleText, W1300
+        GuiControl, MyGui22:Move, VisibleText, W1300
+        GuiControl, MyGui23:Move, VisibleText, W1300
+        GuiControl, MyGui24:Move, VisibleText, W1300
+        GuiControl, MyGui31:Move, VisibleText, W1300
+        GuiControl, MyGui32:Move, VisibleText, W1300
+        GuiControl, MyGui33:Move, VisibleText, W1300
+        GuiControl, MyGui34:Move, VisibleText, W1300
+    }
+    WinActivate ahk_id %active_id%
 }
