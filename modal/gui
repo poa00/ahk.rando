@@ -127,7 +127,7 @@ if MonCount > 1
     s3h := Mon3Bottom - Mon3Top ; 1079
 }
 
-buttonWidth := 500
+buttonWidth := 800
 buttonHeight := 7
 
 x1 := s1w - buttonWidth - 1
