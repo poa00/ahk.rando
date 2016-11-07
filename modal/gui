@@ -119,10 +119,10 @@ s3h := 899
 SysGet, MonCount, MonitorCount
 if MonCount > 1
 {
-    SysGet, Mon2, Monitor, 2
+    SysGet, Mon2, Monitor, 3
     s2w := Mon2Right - Mon2Left ; 1920
     s2h := Mon2Bottom - Mon2Top ; 1079
-    SysGet, Mon3, Monitor, 3
+    SysGet, Mon3, Monitor, 2
     s3w := Mon3Right - Mon3Left ; 1920
     s3h := Mon3Bottom - Mon3Top ; 1079
 }
@@ -131,9 +131,9 @@ buttonWidth := 800
 buttonHeight := 7
 
 x1 := s1w - buttonWidth - 1
-x2 := s1w
+x2 := s1w + 1
 x3 := s1w + s2w - buttonWidth - 1
-x4 := s1w + s2w
+x4 := s1w + s2w + 1
 x5 := s1w + s2w + s3w - buttonWidth - 1
 y1 := s1h - buttonHeight - 3
 y2 := s2h - buttonHeight - 3
