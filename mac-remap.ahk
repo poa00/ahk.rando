@@ -45,6 +45,10 @@ $+`;::Send `;
   IfMsgBox, Yes, Edit
 Return
 
+#z::
+  DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
+Return
+
 !t::
   WinSet, Style, ^0xC00000, A
   WinSet, Style, ^0x840000, A
