@@ -3,9 +3,16 @@
 
 global moveMouseThreads := 0
 global slowSpeed := 8
-global midSpeed := 40
+global midSpeed := 60
 global fastSpeed := 400
 global Cursor := A_ScriptDir . "\modal\red.cur"
+
+VarSetCapacity(FILTERKEYS, 24)
+NumPut(24, FILTERKEYS, 0, "UInt") ;cbSize
+NumPut(1, FILTERKEYS, 4, "UInt") ;dwFlag
+NumPut(300, FILTERKEYS, 12, "UInt") ;iDelayMSec
+NumPut(50, FILTERKEYS, 16, "UInt") ;RepeatMSec
+DllCall("SystemParametersInfo", "UInt", 0x0033, "UInt", 0, "Ptr", &FILTERKEYS, "Uint", 0)
 
 ActivateMouse() {
     mousejumpActivate()
@@ -296,28 +303,24 @@ FastLeftMove() {
     UpdateCursor()
     global fastSpeed
     MouseMove, -%fastSpeed%, 0, 0,R
-    send {control down}{control up}
 }
 
 FastUpMove() {
     UpdateCursor()
     global fastSpeed
     MouseMove, 0, -%fastSpeed%, 0,R
-    send {control down}{control up}
 }
 
 FastDownMove() {
     UpdateCursor()
     global fastSpeed
     MouseMove, 0, %fastSpeed%, 0,R
-    send {control down}{control up}
 }
 
 FastRightMove() {
     UpdateCursor()
     global fastSpeed
     MouseMove, %fastSpeed%, 0, 0,R
-    send {control down}{control up}
 }
 
 SendScrollUp() {
