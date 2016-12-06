@@ -5,6 +5,7 @@ global moveMouseThreads := 0
 global slowSpeed := 8
 global midSpeed := 20
 global fastSpeed := 200
+global Cursor := A_ScriptDir . "\modal\red.cur"
 
 ActivateMouse() {
     mousejumpActivate()
@@ -243,69 +244,77 @@ RightMouseUp() {
 }
 
 SlowLeftMove() {
-    Cursor = %A_ScriptDir%\modal\cursor.ani
-    CursorHandle := DllCall( "LoadCursor", Uint,0, Int,IDC_SIZEALL )
-    CursorHandle := DllCall( "LoadCursorFromFile", Str,Cursor )
-    SetSystemCursor(Cursor)
+    UpdateCursor()
     global slowSpeed
     MouseMove, -%slowSpeed%, 0, 0,R
 }
 
 SlowUpMove() {
+    UpdateCursor()
     global slowSpeed
     MouseMove, 0, -%slowSpeed%, 0,R
 }
 
 SlowDownMove() {
+    UpdateCursor()
     global slowSpeed
     MouseMove, 0, %slowSpeed%, 0,R
 }
 
 SlowRightMove() {
+    UpdateCursor()
     global slowSpeed
     RestoreCursors()
     MouseMove, %slowSpeed%, 0, 0,R
 }
 
 MidLeftMove() {
+    UpdateCursor()
     global midSpeed
     MouseMove, -%midSpeed%, 0, 0,R
 }
 
 MidUpMove() {
+    UpdateCursor()
     global midSpeed
     MouseMove, 0, -%midSpeed%, 0,R
 }
 
 MidDownMove() {
+    UpdateCursor()
     global midSpeed
     MouseMove, 0, %midSpeed%, 0,R
 }
 
 MidRightMove() {
+    UpdateCursor()
     global midSpeed
     MouseMove, %midSpeed%, 0, 0,R
 }
 
 FastLeftMove() {
+    UpdateCursor()
     global fastSpeed
     MouseMove, -%fastSpeed%, 0, 0,R
     send {control down}{control up}
 }
 
 FastUpMove() {
+    UpdateCursor()
     global fastSpeed
     MouseMove, 0, -%fastSpeed%, 0,R
     send {control down}{control up}
 }
 
 FastDownMove() {
+    UpdateCursor()
     global fastSpeed
     MouseMove, 0, %fastSpeed%, 0,R
     send {control down}{control up}
 }
 
 FastRightMove() {
+    UpdateCursor()
     global fastSpeed
     MouseMove, %fastSpeed%, 0, 0,R
     send {control down}{control up}
