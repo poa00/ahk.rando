@@ -7,6 +7,8 @@ Send, {CTRLDOWN}{CTRLUP}{ALTDOWN}{ALTUP}{WINDOWN}{WINUP}{SHIFTDOWN}{SHIFTUP}
 
 ; alt-3 to hash 
 !3::
+  global Cursor := A_ScriptDir . "\modal\hidden.cur"
+  UpdateCursor()
   Send, {Raw}#
 Return
 
