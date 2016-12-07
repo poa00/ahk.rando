@@ -1,6 +1,8 @@
 ; Set up the initial state
 SetWinDelay, -1
 global mode := ""
+buttonWidth := 300
+buttonHeight := 3
 
 ; Create the gui
 Gui, MyGui11:New,, MyGui11
@@ -126,9 +128,6 @@ if MonCount > 1
     s3w := Mon3Right - Mon3Left ; 1920
     s3h := Mon3Bottom - Mon3Top ; 1079
 }
-
-buttonWidth := 800
-buttonHeight := 7
 
 x1 := s1w - buttonWidth - 1
 x2 := s1w + 1
