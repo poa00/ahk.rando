@@ -5,12 +5,6 @@ Send, {CTRLDOWN}{CTRLUP}{ALTDOWN}{ALTUP}{WINDOWN}{WINUP}{SHIFTDOWN}{SHIFTUP}
 ; double quote to at
 !2::@
 
-; alt-3 to hash 
-!3::
-  global Cursor := A_ScriptDir . "\modal\hidden.cur"
-  Send, {Raw}#
-Return
-
 ; right-alt to tab
 LControl & RAlt::Send, {tab}
 ; LControl & Alt::Send, {tab}
@@ -18,21 +12,29 @@ LControl & RAlt::Send, {tab}
 ; at to double quote
 ; +'::"
 
-; hash to backslash
-#::\
-
 ; tilde to pipe
 ~::\
 
 ; pipe to tilde
 |::~
 
-; backslash to backtick
-$\::Send ``
+; hash to backslash
+#::\
 
-; swap hyphen and underscore
-+-::Send -
+; backslash to hyphen
+$\::Send -
+
+; hyphen to underscore
 -::_
+
+; underscore to backtick
++-::Send ``
+
+; alt-3 to hash 
+!3::
+  global Cursor := A_ScriptDir . "\modal\hidden.cur"
+  Send, {Raw}#
+Return
 
 ; swap colon and semicolon
 $`;::Send `:
