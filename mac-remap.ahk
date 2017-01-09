@@ -24,11 +24,11 @@ LControl & RAlt::Send, {tab}
 ; backslash to hyphen
 $\::Send -
 
-; hyphen to underscore
--::_
-
 ; underscore to backtick
 +-::Send ``
+
+; hyphen to underscore
+-::_
 
 ; alt-3 to hash 
 !3::
