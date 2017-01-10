@@ -65,26 +65,26 @@ mousejumpActivate() {
 	Hotkey, ., mousejumpLoadDot
 	Hotkey, /, mousejumpLoadSlash
 
-	Hotkey, !6, mousejumpSave6
-	Hotkey, !7, mousejumpSave7
-	Hotkey, !8, mousejumpSave8
-	Hotkey, !9, mousejumpSave9
-	Hotkey, !0, mousejumpSave0
-	Hotkey, !y, mousejumpSaveY
-	Hotkey, !u, mousejumpSaveU
-	Hotkey, !i, mousejumpSaveI
-	Hotkey, !o, mousejumpSaveO
-	Hotkey, !p, mousejumpSaveP
-	Hotkey, !h, mousejumpSaveH
-	Hotkey, !j, mousejumpSaveJ
-	Hotkey, !k, mousejumpSaveK
-	Hotkey, !l, mousejumpSaveL
-	Hotkey, !:, mousejumpSaveColon
-	Hotkey, !n, mousejumpSaveN
-	Hotkey, !m, mousejumpSaveM
-	Hotkey, !`,, mousejumpSaveComma
-	Hotkey, !., mousejumpSaveDot
-	Hotkey, !/, mousejumpSaveSlash
+	Hotkey, +6, mousejumpSave6
+	Hotkey, +7, mousejumpSave7
+	Hotkey, +8, mousejumpSave8
+	Hotkey, +9, mousejumpSave9
+	Hotkey, +0, mousejumpSave0
+	Hotkey, +y, mousejumpSaveY
+	Hotkey, +u, mousejumpSaveU
+	Hotkey, +i, mousejumpSaveI
+	Hotkey, +o, mousejumpSaveO
+	Hotkey, +p, mousejumpSaveP
+	Hotkey, +h, mousejumpSaveH
+	Hotkey, +j, mousejumpSaveJ
+	Hotkey, +k, mousejumpSaveK
+	Hotkey, +l, mousejumpSaveL
+	Hotkey, +:, mousejumpSaveColon
+	Hotkey, +n, mousejumpSaveN
+	Hotkey, +m, mousejumpSaveM
+	Hotkey, +`,, mousejumpSaveComma
+	Hotkey, +., mousejumpSaveDot
+	Hotkey, +/, mousejumpSaveSlash
 
 	Hotkey, 6, On
 	Hotkey, 7, On
@@ -107,26 +107,26 @@ mousejumpActivate() {
 	Hotkey, ., On
 	Hotkey, /, On
 
-	Hotkey, !6, On
-	Hotkey, !7, On
-	Hotkey, !8, On
-	Hotkey, !9, On
-	Hotkey, !0, On
-	Hotkey, !y, On
-	Hotkey, !u, On
-	Hotkey, !i, On
-	Hotkey, !o, On
-	Hotkey, !p, On
-	Hotkey, !h, On
-	Hotkey, !j, On
-	Hotkey, !k, On
-	Hotkey, !l, On
-	Hotkey, !:, On
-	Hotkey, !n, On
-	Hotkey, !m, On
-	Hotkey, !`,, On
-	Hotkey, !., On
-	Hotkey, !/, On
+	Hotkey, +6, On
+	Hotkey, +7, On
+	Hotkey, +8, On
+	Hotkey, +9, On
+	Hotkey, +0, On
+	Hotkey, +y, On
+	Hotkey, +u, On
+	Hotkey, +i, On
+	Hotkey, +o, On
+	Hotkey, +p, On
+	Hotkey, +h, On
+	Hotkey, +j, On
+	Hotkey, +k, On
+	Hotkey, +l, On
+	Hotkey, +:, On
+	Hotkey, +n, On
+	Hotkey, +m, On
+	Hotkey, +`,, On
+	Hotkey, +., On
+	Hotkey, +/, On
 }
 
 
@@ -154,26 +154,26 @@ mousejumpDeactivate() {
 	Hotkey, ., Off
 	Hotkey, /, Off
 
-	Hotkey, !6, Off
-	Hotkey, !7, Off
-	Hotkey, !8, Off
-	Hotkey, !9, Off
-	Hotkey, !0, Off
-	Hotkey, !y, Off
-	Hotkey, !u, Off
-	Hotkey, !i, Off
-	Hotkey, !o, Off
-	Hotkey, !p, Off
-	Hotkey, !h, Off
-	Hotkey, !j, Off
-	Hotkey, !k, Off
-	Hotkey, !l, Off
-	Hotkey, !:, Off
-	Hotkey, !n, Off
-	Hotkey, !m, Off
-	Hotkey, !`,, Off
-	Hotkey, !., Off
-	Hotkey, !/, Off
+	Hotkey, +6, Off
+	Hotkey, +7, Off
+	Hotkey, +8, Off
+	Hotkey, +9, Off
+	Hotkey, +0, Off
+	Hotkey, +y, Off
+	Hotkey, +u, Off
+	Hotkey, +i, Off
+	Hotkey, +o, Off
+	Hotkey, +p, Off
+	Hotkey, +h, Off
+	Hotkey, +j, Off
+	Hotkey, +k, Off
+	Hotkey, +l, Off
+	Hotkey, +:, Off
+	Hotkey, +n, Off
+	Hotkey, +m, Off
+	Hotkey, +`,, Off
+	Hotkey, +., Off
+	Hotkey, +/, Off
 }
 
 mousejumpSave6() {

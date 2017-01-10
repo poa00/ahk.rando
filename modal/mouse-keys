@@ -25,9 +25,9 @@ ActivateMouse() {
     Hotkey, t Up, MiddleMouseUp
 
     Hotkey, s, GoInsert
-    Hotkey, +s, GoInsert
+    Hotkey, !s, GoInsert
     Hotkey, a, GoVim
-    Hotkey, +a, GoVim
+    Hotkey, !a, GoVim
 
     Hotkey, r, SendScrollUp
     Hotkey, v, SendScrollDown
@@ -36,12 +36,12 @@ ActivateMouse() {
     Hotkey, Space, MouseDown
     Hotkey, Space Up, MouseUp
 
-    Hotkey, +r, SendScrollUp
-    Hotkey, +v, SendScrollDown
-    Hotkey, +d, SendScrollLeft
-    Hotkey, +g, SendScrollRight
-    Hotkey, +Space, MouseDown
-    Hotkey, +Space Up, MouseUp
+    Hotkey, !r, SendScrollUp
+    Hotkey, !v, SendScrollDown
+    Hotkey, !d, SendScrollLeft
+    Hotkey, !g, SendScrollRight
+    Hotkey, !Space, MouseDown
+    Hotkey, !Space Up, MouseUp
 
     Hotkey, ^r, SendScrollUp
     Hotkey, ^v, SendScrollDown
@@ -50,24 +50,26 @@ ActivateMouse() {
     Hotkey, ^Space, MouseDown
     Hotkey, ^Space Up, MouseUp
 
+    Hotkey, _, On
+
     Hotkey, f, On
     Hotkey, f Up, On
     Hotkey, t, On
     Hotkey, t Up, On
 
     Hotkey, s, On
-    Hotkey, +s, On
+    Hotkey, !s, On
     Hotkey, a, On
-    Hotkey, +a, On
+    Hotkey, !a, On
 
-    Hotkey, +r, On
-    Hotkey, +v, On
-    Hotkey, +d, On
-    Hotkey, +g, On
-    Hotkey, +Space, On
-    Hotkey, +Space Up, On
-    Hotkey, +`,, On
-    Hotkey, +`., On
+    Hotkey, !r, On
+    Hotkey, !v, On
+    Hotkey, !d, On
+    Hotkey, !g, On
+    Hotkey, !Space, On
+    Hotkey, !Space Up, On
+    Hotkey, !`,, On
+    Hotkey, !`., On
 
     Hotkey, ^r, On
     Hotkey, ^v, On
@@ -104,18 +106,18 @@ nonmousejumpActivate() {
     Hotkey, i, FastUpMove
     Hotkey, o, FastRightMove
 
-    Hotkey, +n, SlowLeftMove
-    Hotkey, +m, SlowDownMove
-    Hotkey, +`,, SlowUpMove
-    Hotkey, +`., SlowRightMove
-    Hotkey, +h, MidLeftMove
-    Hotkey, +j, MidDownMove
-    Hotkey, +k, MidUpMove
-    Hotkey, +l, MidRightMove
-    Hotkey, +y, FastLeftMove
-    Hotkey, +u, FastDownMove
-    Hotkey, +i, FastUpMove
-    Hotkey, +o, FastRightMove
+    Hotkey, !n, SlowLeftMove
+    Hotkey, !m, SlowDownMove
+    Hotkey, !`,, SlowUpMove
+    Hotkey, !`., SlowRightMove
+    Hotkey, !h, MidLeftMove
+    Hotkey, !j, MidDownMove
+    Hotkey, !k, MidUpMove
+    Hotkey, !l, MidRightMove
+    Hotkey, !y, FastLeftMove
+    Hotkey, !u, FastDownMove
+    Hotkey, !i, FastUpMove
+    Hotkey, !o, FastRightMove
 
     Hotkey, ^n, SlowLeftMove
     Hotkey, ^m, SlowDownMove
@@ -130,16 +132,16 @@ nonmousejumpActivate() {
     Hotkey, ^i, FastUpMove
     Hotkey, ^o, FastRightMove
 
-    Hotkey, +y, On
-    Hotkey, +u, On
-    Hotkey, +i, On
-    Hotkey, +o, On
-    Hotkey, +h, On
-    Hotkey, +j, On
-    Hotkey, +k, On
-    Hotkey, +l, On
-    Hotkey, +n, On
-    Hotkey, +m, On
+    Hotkey, !y, On
+    Hotkey, !u, On
+    Hotkey, !i, On
+    Hotkey, !o, On
+    Hotkey, !h, On
+    Hotkey, !j, On
+    Hotkey, !k, On
+    Hotkey, !l, On
+    Hotkey, !n, On
+    Hotkey, !m, On
 
     Hotkey, ^y, On
     Hotkey, ^u, On
@@ -174,28 +176,28 @@ DeactivateMouse() {
     Hotkey, t Up, Off
 
     Hotkey, s, Off
-    Hotkey, +s, Off
+    Hotkey, !s, Off
     Hotkey, a, Off
-    Hotkey, +a, Off
+    Hotkey, !a, Off
 
-    Hotkey, +r, Off
-    Hotkey, +v, Off
-    Hotkey, +d, Off
-    Hotkey, +g, Off
-    Hotkey, +Space, Off
-    Hotkey, +Space Up, Off
-    Hotkey, +y, Off
-    Hotkey, +u, Off
-    Hotkey, +i, Off
-    Hotkey, +o, Off
-    Hotkey, +h, Off
-    Hotkey, +j, Off
-    Hotkey, +k, Off
-    Hotkey, +l, Off
-    Hotkey, +n, Off
-    Hotkey, +m, Off
-    Hotkey, +`,, Off
-    Hotkey, +`., Off
+    Hotkey, !r, Off
+    Hotkey, !v, Off
+    Hotkey, !d, Off
+    Hotkey, !g, Off
+    Hotkey, !Space, Off
+    Hotkey, !Space Up, Off
+    Hotkey, !y, Off
+    Hotkey, !u, Off
+    Hotkey, !i, Off
+    Hotkey, !o, Off
+    Hotkey, !h, Off
+    Hotkey, !j, Off
+    Hotkey, !k, Off
+    Hotkey, !l, Off
+    Hotkey, !n, Off
+    Hotkey, !m, Off
+    Hotkey, !`,, Off
+    Hotkey, !`., Off
 
     Hotkey, ^r, Off
     Hotkey, ^v, Off
