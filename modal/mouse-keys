@@ -1,11 +1,11 @@
 #Include %A_ScriptDir%\modal\mousejump
 
-
 global moveMouseThreads := 0
 global slowSpeed := 12
 global midSpeed := 60
 global fastSpeed := 400
 global Cursor := A_ScriptDir . "\modal\red.cur"
+global mousejump := 0
 
 VarSetCapacity(FILTERKEYS, 24)
 NumPut(24, FILTERKEYS, 0, "UInt") ;cbSize
@@ -16,6 +16,8 @@ DllCall("SystemParametersInfo", "UInt", 0x0033, "UInt", 0, "Ptr", &FILTERKEYS, "
 
 ActivateMouse() {
     mousejumpActivate()
+    nonmousejumpActivate()
+    Hotkey, _, mousejumpActivate
 
     Hotkey, f, RightMouseDown
     Hotkey, f Up, RightMouseUp
@@ -33,6 +35,62 @@ ActivateMouse() {
     Hotkey, g, SendScrollRight
     Hotkey, Space, MouseDown
     Hotkey, Space Up, MouseUp
+
+    Hotkey, +r, SendScrollUp
+    Hotkey, +v, SendScrollDown
+    Hotkey, +d, SendScrollLeft
+    Hotkey, +g, SendScrollRight
+    Hotkey, +Space, MouseDown
+    Hotkey, +Space Up, MouseUp
+
+    Hotkey, ^r, SendScrollUp
+    Hotkey, ^v, SendScrollDown
+    Hotkey, ^d, SendScrollLeft
+    Hotkey, ^g, SendScrollRight
+    Hotkey, ^Space, MouseDown
+    Hotkey, ^Space Up, MouseUp
+
+    Hotkey, f, On
+    Hotkey, f Up, On
+    Hotkey, t, On
+    Hotkey, t Up, On
+
+    Hotkey, s, On
+    Hotkey, +s, On
+    Hotkey, a, On
+    Hotkey, +a, On
+
+    Hotkey, +r, On
+    Hotkey, +v, On
+    Hotkey, +d, On
+    Hotkey, +g, On
+    Hotkey, +Space, On
+    Hotkey, +Space Up, On
+    Hotkey, +`,, On
+    Hotkey, +`., On
+
+    Hotkey, ^r, On
+    Hotkey, ^v, On
+    Hotkey, ^d, On
+    Hotkey, ^g, On
+    Hotkey, ^Space, On
+    Hotkey, ^Space Up, On
+    Hotkey, ^`,, On
+    Hotkey, ^`., On
+
+    Hotkey, r, On
+    Hotkey, v, On
+    Hotkey, d, On
+    Hotkey, g, On
+    Hotkey, Space, On
+    Hotkey, Space Up, On
+    Hotkey, `,, On
+    Hotkey, `., On
+} 
+
+nonmousejumpActivate() {
+    Hotkey, _, mousejumpActivate
+
     Hotkey, n, SlowLeftMove
     Hotkey, m, SlowDownMove
     Hotkey, `,, SlowUpMove
@@ -46,12 +104,6 @@ ActivateMouse() {
     Hotkey, i, FastUpMove
     Hotkey, o, FastRightMove
 
-    Hotkey, +r, SendScrollUp
-    Hotkey, +v, SendScrollDown
-    Hotkey, +d, SendScrollLeft
-    Hotkey, +g, SendScrollRight
-    Hotkey, +Space, MouseDown
-    Hotkey, +Space Up, MouseUp
     Hotkey, +n, SlowLeftMove
     Hotkey, +m, SlowDownMove
     Hotkey, +`,, SlowUpMove
@@ -65,12 +117,6 @@ ActivateMouse() {
     Hotkey, +i, FastUpMove
     Hotkey, +o, FastRightMove
 
-    Hotkey, ^r, SendScrollUp
-    Hotkey, ^v, SendScrollDown
-    Hotkey, ^d, SendScrollLeft
-    Hotkey, ^g, SendScrollRight
-    Hotkey, ^Space, MouseDown
-    Hotkey, ^Space Up, MouseUp
     Hotkey, ^n, SlowLeftMove
     Hotkey, ^m, SlowDownMove
     Hotkey, ^`,, SlowUpMove
@@ -84,22 +130,6 @@ ActivateMouse() {
     Hotkey, ^i, FastUpMove
     Hotkey, ^o, FastRightMove
 
-    Hotkey, f, On
-    Hotkey, f Up, On
-    Hotkey, t, On
-    Hotkey, t Up, On
-
-    Hotkey, s, On
-    Hotkey, +s, On
-    Hotkey, a, On
-    Hotkey, +a, On
-    
-    Hotkey, +r, On
-    Hotkey, +v, On
-    Hotkey, +d, On
-    Hotkey, +g, On
-    Hotkey, +Space, On
-    Hotkey, +Space Up, On
     Hotkey, +y, On
     Hotkey, +u, On
     Hotkey, +i, On
@@ -110,15 +140,7 @@ ActivateMouse() {
     Hotkey, +l, On
     Hotkey, +n, On
     Hotkey, +m, On
-    Hotkey, +`,, On
-    Hotkey, +`., On
 
-    Hotkey, ^r, On
-    Hotkey, ^v, On
-    Hotkey, ^d, On
-    Hotkey, ^g, On
-    Hotkey, ^Space, On
-    Hotkey, ^Space Up, On
     Hotkey, ^y, On
     Hotkey, ^u, On
     Hotkey, ^i, On
@@ -129,15 +151,7 @@ ActivateMouse() {
     Hotkey, ^l, On
     Hotkey, ^n, On
     Hotkey, ^m, On
-    Hotkey, ^`,, On
-    Hotkey, ^`., On
 
-    Hotkey, r, On
-    Hotkey, v, On
-    Hotkey, d, On
-    Hotkey, g, On
-    Hotkey, Space, On
-    Hotkey, Space Up, On
     Hotkey, y, On
     Hotkey, u, On
     Hotkey, i, On
@@ -148,8 +162,6 @@ ActivateMouse() {
     Hotkey, l, On
     Hotkey, n, On
     Hotkey, m, On
-    Hotkey, `,, On
-    Hotkey, `., On
 }
 
 
