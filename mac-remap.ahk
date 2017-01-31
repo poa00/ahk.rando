@@ -1,3 +1,8 @@
+; # win key
+; ! alt
+; ^ ctrl
+; + shift
+
 Send, {CTRLDOWN}{CTRLUP}{ALTDOWN}{ALTUP}{WINDOWN}{WINUP}{SHIFTDOWN}{SHIFTUP}
 
 ; Windows to mac remapping
@@ -56,4 +61,12 @@ Return
   WinSet, Style, ^0xC00000, A
   WinSet, Style, ^0x840000, A
   WinSet, Style, ^0xC40000, A
+Return
+
+^!t::
+  ControlGet, buildOutput, List, , SysListView321, BuildTool
+  FileAppend,
+  (
+    "%buildOutput%" `n
+  ), C:\Users\lavery\Controls.txt 
 Return
