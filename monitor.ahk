@@ -1,3 +1,4 @@
+#SingleInstance force
 #Persistent
 DetectHiddenText, On
 
