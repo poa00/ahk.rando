@@ -11,7 +11,7 @@ Send, {CTRLDOWN}{CTRLUP}{ALTDOWN}{ALTUP}{WINDOWN}{WINUP}{SHIFTDOWN}{SHIFTUP}
 !2::@
 
 ; right-alt to backslash
-LControl & RAlt::Send, \\
+LControl & RAlt::Send, \
 ; LControl & Alt::Send, {tab}
 
 ; at to double quote
