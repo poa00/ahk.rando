@@ -10,8 +10,8 @@ Send, {CTRLDOWN}{CTRLUP}{ALTDOWN}{ALTUP}{WINDOWN}{WINUP}{SHIFTDOWN}{SHIFTUP}
 ; double quote to at
 !2::@
 
-; right-alt to tab
-LControl & RAlt::Send, {tab}
+; right-alt to backslash
+LControl & RAlt::Send, \\
 ; LControl & Alt::Send, {tab}
 
 ; at to double quote
@@ -24,8 +24,7 @@ LControl & RAlt::Send, {tab}
 |::~
 
 ; hash to backslash
-#::\
-
+#::Send, {tab}
 ; backslash to hyphen
 $\::Send -
 
