@@ -1,2 +1,5 @@
-#Include %A_ScriptDir%\modal\main
-#Include %A_ScriptDir%\modal\hotkeys
+TrayTip, ahk load, ahk scripts loaded
+#Include %A_ScriptDir%\monitor.ahk
+#Include %A_ScriptDir%\modal\main.ahk
+#Include %A_ScriptDir%\modal\hotkeys.ahk
+#Include %A_ScriptDir%\remap.ahk

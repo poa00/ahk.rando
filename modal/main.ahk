@@ -1,7 +1,7 @@
-#Include %A_ScriptDir%\modal\gui
-#Include %A_ScriptDir%\modal\change
-#Include %A_ScriptDir%\modal\vim-keys
-#Include %A_ScriptDir%\modal\mouse-keys
+#Include %A_ScriptDir%\modal\gui.ahk
+#Include %A_ScriptDir%\modal\change.ahk
+#Include %A_ScriptDir%\modal\vim-keys.ahk
+#Include %A_ScriptDir%\modal\mouse-keys.ahk
 
 ChangeMode(newMode) {
     global mode
@@ -53,4 +53,3 @@ Control & CapsLock::goMouse()
 GoMouse() {
     changeMode("mouse")
 }
-

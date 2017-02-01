@@ -1,6 +1,5 @@
 ; Switch mode
 global mode
-^!r::Reload
 $`::
   ChangeMode("vim")
 Return

@@ -3,8 +3,6 @@
 ; ^ ctrl
 ; + shift
 
-Send, {CTRLDOWN}{CTRLUP}{ALTDOWN}{ALTUP}{WINDOWN}{WINUP}{SHIFTDOWN}{SHIFTUP}
-
 ; Windows to mac remapping
 
 ; double quote to at
@@ -24,7 +22,7 @@ LControl & RAlt::Send, \
 |::~
 
 ; hash to backslash
-#::Send, {tab}
+$#::Send, {tab}
 ; backslash to hyphen
 $\::Send -
 
@@ -45,7 +43,7 @@ $`;::Send `:
 $+`;::Send `;
 
 ; Reload this script
-^+r::
+^!r::
   Reload
   Sleep 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
   MsgBox, 4,, The script could not be reloaded. Would you like to open it for editing?
@@ -63,9 +61,6 @@ Return
 Return
 
 ^!t::
-  ControlGet, buildOutput, List, , SysListView321, BuildTool
-  FileAppend,
-  (
-    "%buildOutput%" `n
-  ), C:\Users\lavery\Controls.txt 
+  MsgBox, test2
+  TrayTip, Test, Test
 Return

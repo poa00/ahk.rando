@@ -2,11 +2,10 @@
 DetectHiddenText, On
 
 SetTimer, Check, 1000, On
-global hasFinished := 0
+global hasFinished := 2
 
 Check() {
   global hasFinished
-  counter := counter + 1
   ControlGet, buildOutput, List, , SysListView323, BuildTool
 
   IfInString, buildOutput, Finished
@@ -14,6 +13,11 @@ Check() {
     finished := 1
   } else {
     finished := 0
+  }
+
+  If (finished = 0 and hasFinished = 1)
+  {
+    TrayTip, build started, monitor.ahk has detected that build bot has begun a build
   }
 
   If (finished = 1 and hasFinished = 0)
@@ -24,7 +28,7 @@ Check() {
     Sleep, 500
     ControlSend,, n, Microsoft Visual Studio
 
-    MsgBox, finished
+    TrayTip, build completed, monitor.ahk has detected that build bot has completed a build
   }
 
   hasFinished := finished

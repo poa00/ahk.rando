@@ -1,4 +1,4 @@
-#Include %A_ScriptDir%\modal\mousejump
+#Include %A_ScriptDir%\modal\mousejump.ahk
 
 global moveMouseThreads := 0
 global slowSpeed := 12
