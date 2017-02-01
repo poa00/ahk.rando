@@ -61,6 +61,15 @@ Return
 Return
 
 ^!t::
-  MsgBox, test2
-  TrayTip, Test, Test
+  FileDelete, %A_ScriptDir%\debug
+  WinGet, buildToolControls, ControlList, BuildTool
+  Loop, Parse, buildToolControls, `n
+  {
+    ControlGetText, text, %A_LoopField%, BuildTool
+    FileAppend, %A_LoopField%: %text%`n, %A_ScriptDir%\debug
+    IfInString, text, Output
+    {
+      TrayTip, Test, %A_LoopField%
+    }
+  }
 Return

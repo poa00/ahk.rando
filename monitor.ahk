@@ -7,7 +7,8 @@ global hasFinished := 2
 
 Check() {
   global hasFinished
-  ControlGet, buildOutput, List, , SysListView323, BuildTool
+  outputId := GetOutputID()
+  ControlGet, buildOutput, List, , %outputId%, BuildTool
 
   IfInString, buildOutput, Finished
   {
@@ -34,4 +35,16 @@ Check() {
   }
 
   hasFinished := finished
+}
+
+GetOutputId() {
+  WinGet, buildToolControls, ControlList, BuildTool
+  Loop, Parse, buildToolControls, `n
+  {
+    ControlGetText, text, %A_LoopField%, BuildTool
+    IfInString, text, Output
+    {
+      return %A_LoopField%
+    }
+  }
 }
