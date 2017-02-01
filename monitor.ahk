@@ -18,6 +18,7 @@ Check() {
 
   If (finished = 0 and hasFinished = 1)
   {
+    ControlSend,, {Shift down}{f5}{Shift up}, EliteDangerous
     TrayTip, build started, monitor.ahk has detected that build bot has begun a build
   }
 
