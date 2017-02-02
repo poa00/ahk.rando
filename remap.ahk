@@ -63,13 +63,14 @@ Return
 ^!t::
   FileDelete, %A_ScriptDir%\debug
   WinGet, buildToolControls, ControlList, A
-  Loop, Parse, buildToolControls, `n
-  {
-    ControlGetText, text, %A_LoopField%, A
-    FileAppend, %A_LoopField%: %text%`n, %A_ScriptDir%\debug
-    IfInString, text, Error
-    {
-      TrayTip, Test, %text%
-    }
-  }
+  ; ControlGet, text, List, text, , SysListView, Update
+  ; Loop, Parse, buildToolControls, `n
+  ; {
+  ;   ControlGetText, text, %A_LoopField%, A
+  ;   FileAppend, %A_LoopField%: %text%`n, %A_ScriptDir%\debug
+  ;   IfInString, text, Error
+  ;   {
+  ;     TrayTip, Test, %text%
+  ;   }
+  ; }
 Return
