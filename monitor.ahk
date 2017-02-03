@@ -21,7 +21,8 @@ UpdateFinishedCheck() {
   }
   if (update_finished = 1 and g_update_finished = 0)
   {
-    TrayTip, update finished, starting resource buildstarting resource build
+    TrayTip, update finished, starting build
+    ControlSend,, {ctrl down}{shift down}b{shift up}{ctrl up}, EliteDangerous
     ControlSend, Button15, {f7}, BuildTool
     ControlSend,, {Escape}, Update Finished!
   }
@@ -64,6 +65,11 @@ BuildBotCheck() {
     finished := 1
   } else {
     finished := 0
+  }
+
+  If (finished = 0 and g_has_build_bot_finished = 1)
+  {
+    ControlSend,, {Shift down}{f5}{Shift up}, EliteDangerous
   }
 
   If (finished = 1 and g_has_build_bot_finished = 0)
