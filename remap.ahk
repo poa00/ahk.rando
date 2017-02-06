@@ -32,6 +32,18 @@ $\::Send -
 ; hyphen to underscore
 -::_
 
+; alt-2 to home 
+!1::
+  global Cursor := A_ScriptDir . "\modal\hidden.cur"
+  Send, {Raw}~
+Return
+
+; alt-4 to dash 
+!4::
+  global Cursor := A_ScriptDir . "\modal\hidden.cur"
+  Send, {Raw}-
+Return
+
 ; alt-3 to hash 
 !3::
   global Cursor := A_ScriptDir . "\modal\hidden.cur"
