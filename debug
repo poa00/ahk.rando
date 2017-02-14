@@ -1,5 +1,0 @@
-Button1: &Break
-Button2: &Continue
-Button3: &Ignore All
-Static1: 
-Static2: [15:45:54GMT 51.483s][ShipCargo] Error: CargoBayComponent::Init_Activate : Ship DiamondBackXL_0x00000001000008b0 was created with more cargo in hold than its modules allow space for (5 out of 4)
