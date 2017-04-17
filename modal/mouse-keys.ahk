@@ -285,7 +285,6 @@ SlowDownMove() {
 SlowRightMove() {
     UpdateCursor()
     global slowSpeed
-    RestoreCursors()
     MouseMove, %slowSpeed%, 0, 0,R
 }
 
