@@ -33,7 +33,7 @@ $\::Send -
 -::_
 
 ; alt-2 to home 
-!1::
+!2::
   global Cursor := A_ScriptDir . "\modal\hidden.cur"
   Send, {Raw}~
 Return
