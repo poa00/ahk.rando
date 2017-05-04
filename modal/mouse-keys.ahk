@@ -49,6 +49,13 @@ nonmousejumpActivate() {
     Hotkey, !Space, MouseDown
     Hotkey, !Space Up, MouseUp
 
+    Hotkey, +r, SendScrollUp
+    Hotkey, +v, SendScrollDown
+    Hotkey, +d, SendScrollLeft
+    Hotkey, +g, SendScrollRight
+    Hotkey, +Space, MouseDown
+    Hotkey, +Space Up, MouseUp
+
     Hotkey, ^r, SendScrollUp
     Hotkey, ^v, SendScrollDown
     Hotkey, ^d, SendScrollLeft
@@ -124,6 +131,15 @@ nonmousejumpOn() {
     Hotkey, !`,, On
     Hotkey, !`., On
 
+    Hotkey, +r, On
+    Hotkey, +v, On
+    Hotkey, +d, On
+    Hotkey, +g, On
+    Hotkey, +Space, On
+    Hotkey, +Space Up, On
+    Hotkey, +`,, On
+    Hotkey, +`., On
+
     Hotkey, ^r, On
     Hotkey, ^v, On
     Hotkey, ^d, On
@@ -192,12 +208,24 @@ nonmousejumpDeactivate() {
     Hotkey, ], Off
     Hotkey, !], Off
 
+    Hotkey, r, Off
+    Hotkey, +v, Off
+    Hotkey, +d, Off
+    Hotkey, +g, Off
+    Hotkey, +Space, Off
+    Hotkey, +Space Up, Off
+    Hotkey, +`,, Off
+    Hotkey, +`., Off
+
     Hotkey, !r, Off
     Hotkey, !v, Off
     Hotkey, !d, Off
     Hotkey, !g, Off
     Hotkey, !Space, Off
     Hotkey, !Space Up, Off
+    Hotkey, !`,, Off
+    Hotkey, !`., Off
+
     Hotkey, !y, Off
     Hotkey, !u, Off
     Hotkey, !i, Off
@@ -208,9 +236,6 @@ nonmousejumpDeactivate() {
     Hotkey, !l, Off
     Hotkey, !n, Off
     Hotkey, !m, Off
-    Hotkey, !`,, Off
-    Hotkey, !`., Off
-
     Hotkey, ^r, Off
     Hotkey, ^v, Off
     Hotkey, ^d, Off

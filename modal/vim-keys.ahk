@@ -22,6 +22,7 @@ ActivateVimKeys() {
     hotkey, p, Paste
     hotkey, y, Copy
     hotkey, u, CtrlA
+    hotkey, n, CtrlF
 
     hotkey, +h, LeftFunc
     hotkey, +j, DownFunc
@@ -57,6 +58,7 @@ VimKeysOn() {
     hotkey, i, on
     hotkey, y, on
     hotkey, u, on
+    hotkey, n, on
     hotkey, s, on
     hotkey, a, on
     hotkey, o, on
@@ -95,6 +97,7 @@ DeactivateVimKeys() {
     hotkey, i, off
     hotkey, y, off
     hotkey, u, off
+    hotkey, n, off
     hotkey, s, off
     hotkey, a, off
     hotkey, o, off
@@ -209,4 +212,9 @@ Paste() {
 
 CtrlA() {
     Send ^a
+}
+
+CtrlF() {
+    Send ^f
+    GoToInsert()
 }
