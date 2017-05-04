@@ -21,6 +21,7 @@ ActivateVimKeys() {
     hotkey, v, ShiftToggle
     hotkey, p, Paste
     hotkey, y, Copy
+    hotkey, u, CtrlA
 
     hotkey, +h, LeftFunc
     hotkey, +j, DownFunc
@@ -55,6 +56,7 @@ VimKeysOn() {
     hotkey, x, on
     hotkey, i, on
     hotkey, y, on
+    hotkey, u, on
     hotkey, s, on
     hotkey, a, on
     hotkey, o, on
@@ -92,6 +94,7 @@ DeactivateVimKeys() {
     hotkey, x, off
     hotkey, i, off
     hotkey, y, off
+    hotkey, u, off
     hotkey, s, off
     hotkey, a, off
     hotkey, o, off
@@ -202,4 +205,8 @@ Copy() {
 
 Paste() {
     Send ^v
+}
+
+CtrlA() {
+    Send ^a
 }
