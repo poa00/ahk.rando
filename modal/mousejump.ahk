@@ -131,8 +131,6 @@ mousejumpActivate() {
 
 
 mousejumpDeactivate() {
-    Hotkey, _, Off
-
 	Hotkey, 6, Off
 	Hotkey, 7, Off
 	Hotkey, 8, Off

@@ -17,17 +17,23 @@ DllCall("SystemParametersInfo", "UInt", 0x0033, "UInt", 0, "Ptr", &FILTERKEYS, "
 ActivateMouse() {
     mousejumpActivate()
     nonmousejumpActivate()
-    Hotkey, _, mousejumpActivate
+} 
 
+DeactivateMouse() {
+    mousejumpDeactivate()
+    nonmousejumpDeactivate()
+}
+
+nonmousejumpActivate() {
     Hotkey, f, RightMouseDown
     Hotkey, f Up, RightMouseUp
     Hotkey, t, MiddleMouseDown
     Hotkey, t Up, MiddleMouseUp
 
-    Hotkey, s, GoInsert
-    Hotkey, !s, GoInsert
-    Hotkey, a, GoVim
-    Hotkey, !a, GoVim
+    Hotkey, [, GoInsert
+    Hotkey, ![, GoInsert
+    Hotkey, ], GoVim
+    Hotkey, !], GoVim
 
     Hotkey, r, SendScrollUp
     Hotkey, v, SendScrollDown
@@ -49,49 +55,6 @@ ActivateMouse() {
     Hotkey, ^g, SendScrollRight
     Hotkey, ^Space, MouseDown
     Hotkey, ^Space Up, MouseUp
-
-    Hotkey, _, On
-
-    Hotkey, f, On
-    Hotkey, f Up, On
-    Hotkey, t, On
-    Hotkey, t Up, On
-
-    Hotkey, s, On
-    Hotkey, !s, On
-    Hotkey, a, On
-    Hotkey, !a, On
-
-    Hotkey, !r, On
-    Hotkey, !v, On
-    Hotkey, !d, On
-    Hotkey, !g, On
-    Hotkey, !Space, On
-    Hotkey, !Space Up, On
-    Hotkey, !`,, On
-    Hotkey, !`., On
-
-    Hotkey, ^r, On
-    Hotkey, ^v, On
-    Hotkey, ^d, On
-    Hotkey, ^g, On
-    Hotkey, ^Space, On
-    Hotkey, ^Space Up, On
-    Hotkey, ^`,, On
-    Hotkey, ^`., On
-
-    Hotkey, r, On
-    Hotkey, v, On
-    Hotkey, d, On
-    Hotkey, g, On
-    Hotkey, Space, On
-    Hotkey, Space Up, On
-    Hotkey, `,, On
-    Hotkey, `., On
-} 
-
-nonmousejumpActivate() {
-    Hotkey, _, mousejumpActivate
 
     Hotkey, n, SlowLeftMove
     Hotkey, m, SlowDownMove
@@ -132,6 +95,52 @@ nonmousejumpActivate() {
     Hotkey, ^i, FastUpMove
     Hotkey, ^o, FastRightMove
 
+    Hotkey, 1, TestFunc
+    Hotkey, 2, SendTilde
+    Hotkey, 3, SendDash
+    Hotkey, 4, SendHash
+    Hotkey, 5, Something
+
+    nonmousejumpOn()
+}
+
+nonmousejumpOn() {
+    Hotkey, f, On
+    Hotkey, f Up, On
+    Hotkey, t, On
+    Hotkey, t Up, On
+
+    Hotkey, [, On
+    Hotkey, ![, On
+    Hotkey, ], On
+    Hotkey, !], On
+
+    Hotkey, !r, On
+    Hotkey, !v, On
+    Hotkey, !d, On
+    Hotkey, !g, On
+    Hotkey, !Space, On
+    Hotkey, !Space Up, On
+    Hotkey, !`,, On
+    Hotkey, !`., On
+
+    Hotkey, ^r, On
+    Hotkey, ^v, On
+    Hotkey, ^d, On
+    Hotkey, ^g, On
+    Hotkey, ^Space, On
+    Hotkey, ^Space Up, On
+    Hotkey, ^`,, On
+    Hotkey, ^`., On
+
+    Hotkey, r, On
+    Hotkey, v, On
+    Hotkey, d, On
+    Hotkey, g, On
+    Hotkey, Space, On
+    Hotkey, Space Up, On
+    Hotkey, `,, On
+    Hotkey, `., On
     Hotkey, !y, On
     Hotkey, !u, On
     Hotkey, !i, On
@@ -164,21 +173,24 @@ nonmousejumpActivate() {
     Hotkey, l, On
     Hotkey, n, On
     Hotkey, m, On
+
+    Hotkey, 1, On
+    Hotkey, 2, On
+    Hotkey, 3, On
+    Hotkey, 4, On
+    Hotkey, 5, On
 }
 
-
-DeactivateMouse() {
-    mousejumpDeactivate()
-
+nonmousejumpDeactivate() {
     Hotkey, f, Off
     Hotkey, f Up, Off
     Hotkey, t, Off
     Hotkey, t Up, Off
 
-    Hotkey, s, Off
-    Hotkey, !s, Off
-    Hotkey, a, Off
-    Hotkey, !a, Off
+    Hotkey, [, Off
+    Hotkey, ![, Off
+    Hotkey, ], Off
+    Hotkey, !], Off
 
     Hotkey, !r, Off
     Hotkey, !v, Off
@@ -236,8 +248,13 @@ DeactivateMouse() {
     Hotkey, m, Off
     Hotkey, `,, Off
     Hotkey, `., Off
-}
 
+    Hotkey, 1, Off
+    Hotkey, 2, Off
+    Hotkey, 3, Off
+    Hotkey, 4, Off
+    Hotkey, 5, Off
+}
 
 MouseDown() {
     Click down
@@ -456,4 +473,25 @@ SetSystemCursor( Cursor = "", cx = 0, cy = 0 )
             }          
         }
     }   
+}
+
+SendTilde() {
+  Send, {Raw}~
+  GoToInsert()
+}
+
+SendDash() {
+  Send, {Raw}-
+  GoToInsert()
+}
+
+SendHash() {
+  Send, {Raw}#
+  GoToInsert()
+}
+
+Something() {
+  WinSet, Style, ^0xC00000, A
+  WinSet, Style, ^0x840000, A
+  WinSet, Style, ^0xC40000, A
 }

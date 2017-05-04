@@ -19,36 +19,20 @@ LControl & RAlt::Send, \
 ~::\
 
 ; pipe to tilde
-|::~
+; |::~
+|::Send a
 
 ; hash to backslash
 $#::Send, {tab}
 ; backslash to hyphen
-$\::Send -
+; $\::Send -
+$\::Send a 
 
 ; underscore to backtick
 +-::Send ``
 
 ; hyphen to underscore
 -::_
-
-; alt-2 to home 
-!2::
-  global Cursor := A_ScriptDir . "\modal\hidden.cur"
-  Send, {Raw}~
-Return
-
-; alt-4 to dash 
-!4::
-  global Cursor := A_ScriptDir . "\modal\hidden.cur"
-  Send, {Raw}-
-Return
-
-; alt-3 to hash 
-!3::
-  global Cursor := A_ScriptDir . "\modal\hidden.cur"
-  Send, {Raw}#
-Return
 
 ; swap colon and semicolon
 $`;::Send `:
@@ -66,13 +50,7 @@ Return
   DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
 Return
 
-!t::
-  WinSet, Style, ^0xC00000, A
-  WinSet, Style, ^0x840000, A
-  WinSet, Style, ^0xC40000, A
-Return
-
-^!t::
+TestFunc() {
   FileDelete, %A_ScriptDir%\debug
   WinGet, buildToolControls, ControlList, A
   ; ControlGet, text, List, text, , SysListView, Update
@@ -85,4 +63,4 @@ Return
   ;     TrayTip, Test, %text%
   ;   }
   ; }
-Return
+}

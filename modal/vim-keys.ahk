@@ -34,6 +34,12 @@ ActivateVimKeys() {
     hotkey, +o, InsertAfterLineFunc
     hotkey, +v, ShiftToggle
 
+    hotkey, [, GoToInsert
+
+    VimKeysOn()
+}
+
+VimKeysOn() {
     hotkey, +{, on
     hotkey, +}, on
     hotkey, +I, on
@@ -66,6 +72,8 @@ ActivateVimKeys() {
     hotkey, +a, on
     hotkey, +o, on
     hotkey, +v, on
+
+    hotkey, [, on
 }
 
 DeactivateVimKeys() {
@@ -101,6 +109,8 @@ DeactivateVimKeys() {
     hotkey, +a, off
     hotkey, +o, off
     hotkey, +v, off
+
+    hotkey, [, off
 }
 
 LeftFunc() {

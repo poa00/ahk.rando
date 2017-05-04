@@ -1,13 +1,9 @@
 ; Switch mode
 global mode
-$`::
-  ChangeMode("vim")
-Return
 $tab::
   ChangeMode("mouse")
 Return
 CapsLock::
-  ChangeMode("insert")
   SendEscape()
 Return
 
