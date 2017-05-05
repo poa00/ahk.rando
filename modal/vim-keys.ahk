@@ -15,6 +15,7 @@ ActivateVimKeys() {
     hotkey, b, LeftWordFunc
     hotkey, x, DeleteFunc
     hotkey, i, InsertFunc
+    hotkey, e, InsertFunc
     hotkey, s, InsertFunc
     hotkey, a, InsertAfterFunc
     hotkey, o, InsertAfterLineFunc
@@ -60,6 +61,7 @@ VimKeysOn() {
     hotkey, b, on
     hotkey, x, on
     hotkey, i, on
+    hotkey, e, on
     hotkey, y, on
     hotkey, g, on
     hotkey, d, on
@@ -103,6 +105,7 @@ DeactivateVimKeys() {
     hotkey, b, off
     hotkey, x, off
     hotkey, i, off
+    hotkey, e, off
     hotkey, y, off
 
     hotkey, g, off
