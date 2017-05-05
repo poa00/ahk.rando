@@ -23,12 +23,10 @@ ActivateVimKeys() {
     hotkey, y, Copy
     hotkey, g, CtrlA
     hotkey, d, CtrlW
-    hotkey, 8, CtrlShiftW
+    hotkey, 8, CtrlShiftT
     hotkey, 9, CtrlShiftTab
     hotkey, 0, CtrlTab
     hotkey, n, CtrlF
-    hotkey, _, AltTab
-    hotkey, =, ShiftAltTab
 
     hotkey, +h, LeftFunc
     hotkey, +j, DownFunc
@@ -68,8 +66,6 @@ VimKeysOn() {
     hotkey, 8, on
     hotkey, 9, on
     hotkey, 0, on
-    hotkey, _, on
-    hotkey, =, on
     hotkey, n, on
     hotkey, s, on
     hotkey, a, on
@@ -114,8 +110,6 @@ DeactivateVimKeys() {
     hotkey, 8, off
     hotkey, 9, off
     hotkey, 0, off
-    hotkey, _, off
-    hotkey, =, off
 
     hotkey, u, off
     hotkey, n, off
@@ -233,6 +227,7 @@ Paste() {
 
 CtrlA() {
     Send ^a
+    GoToInsert()
 }
 
 CtrlF() {
@@ -252,14 +247,6 @@ CtrlShiftTab() {
     Send ^+`t
 }
 
-CtrlShiftW() {
-    Send ^+w
-}
-
-AltTab() {
-    Send !`t
-}
-
-ShiftAltTab() {
-    Send !+`t
+CtrlShiftT() {
+    Send ^+t
 }

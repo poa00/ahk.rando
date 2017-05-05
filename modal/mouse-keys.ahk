@@ -32,8 +32,8 @@ nonmousejumpActivate() {
 
     Hotkey, [, GoInsert
     Hotkey, ![, GoInsert
-    Hotkey, ], GoVim
-    Hotkey, !], GoVim
+    Hotkey, q, GoVim
+    Hotkey, !q, GoVim
 
     Hotkey, r, SendScrollUp
     Hotkey, v, SendScrollDown
@@ -108,6 +108,9 @@ nonmousejumpActivate() {
     Hotkey, 4, SendHash
     Hotkey, 5, Something
 
+    hotkey, _, AltTab
+    hotkey, =, ShiftAltTab
+
     nonmousejumpOn()
 }
 
@@ -119,8 +122,8 @@ nonmousejumpOn() {
 
     Hotkey, [, On
     Hotkey, ![, On
-    Hotkey, ], On
-    Hotkey, !], On
+    Hotkey, q, On
+    Hotkey, !q, On
 
     Hotkey, !r, On
     Hotkey, !v, On
@@ -195,6 +198,9 @@ nonmousejumpOn() {
     Hotkey, 3, On
     Hotkey, 4, On
     Hotkey, 5, On
+
+    hotkey, _, on
+    hotkey, =, on
 }
 
 nonmousejumpDeactivate() {
@@ -205,10 +211,10 @@ nonmousejumpDeactivate() {
 
     Hotkey, [, Off
     Hotkey, ![, Off
-    Hotkey, ], Off
-    Hotkey, !], Off
+    Hotkey, q, Off
+    Hotkey, !q, Off
 
-    Hotkey, r, Off
+    Hotkey, +r, Off
     Hotkey, +v, Off
     Hotkey, +d, Off
     Hotkey, +g, Off
@@ -279,6 +285,9 @@ nonmousejumpDeactivate() {
     Hotkey, 3, Off
     Hotkey, 4, Off
     Hotkey, 5, Off
+
+    hotkey, _, off
+    hotkey, =, off
 }
 
 MouseDown() {
@@ -519,4 +528,20 @@ Something() {
   WinSet, Style, ^0xC00000, A
   WinSet, Style, ^0x840000, A
   WinSet, Style, ^0xC40000, A
+}
+
+AltTab() {
+    Send {Alt Down}
+    Send, {tab}
+    Hotkey, !Enter, ExitAltTab
+    Hotkey, !Enter, on
+} 
+
+ShiftAltTab() {
+    Send, !+{tab}
+}
+
+ExitAltTab() {
+    Send {Alt Up}
+    Hotkey, !Enter, off
 }
