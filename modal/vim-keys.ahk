@@ -22,7 +22,7 @@ ActivateVimKeys() {
     hotkey, v, ShiftToggle
     hotkey, p, Paste
     hotkey, y, Copy
-    hotkey, g, CtrlA
+    hotkey, e, CtrlA
     hotkey, t, CtrlT
     hotkey, d, CtrlW
     hotkey, 8, CtrlShiftT
@@ -64,7 +64,7 @@ VimKeysOn() {
     hotkey, i, on
     hotkey, e, on
     hotkey, y, on
-    hotkey, g, on
+    hotkey, e, on
     hotkey, d, on
     hotkey, t, on
     hotkey, 8, on
@@ -110,7 +110,7 @@ DeactivateVimKeys() {
     hotkey, e, off
     hotkey, y, off
 
-    hotkey, g, off
+    hotkey, e, off
     hotkey, t, off
     hotkey, d, off
     hotkey, 8, off
