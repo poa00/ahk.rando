@@ -30,8 +30,8 @@ nonmousejumpActivate() {
     Hotkey, t, MiddleMouseDown
     Hotkey, t Up, MiddleMouseUp
 
-    Hotkey, e, GoInsert
-    Hotkey, !e, GoInsert
+    Hotkey, s, GoInsert
+    Hotkey, !s, GoInsert
     Hotkey, q, GoVim
     Hotkey, !q, GoVim
 
@@ -120,8 +120,8 @@ nonmousejumpOn() {
     Hotkey, t, On
     Hotkey, t Up, On
 
-    Hotkey, e, On
-    Hotkey, !e, On
+    Hotkey, s, On
+    Hotkey, !s, On
     Hotkey, q, On
     Hotkey, !q, On
 
@@ -209,8 +209,8 @@ nonmousejumpDeactivate() {
     Hotkey, t, Off
     Hotkey, t Up, Off
 
-    Hotkey, e, Off
-    Hotkey, !e, Off
+    Hotkey, s, Off
+    Hotkey, !s, Off
     Hotkey, q, Off
     Hotkey, !q, Off
 
