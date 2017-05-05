@@ -23,6 +23,7 @@ ActivateVimKeys() {
     hotkey, p, Paste
     hotkey, y, Copy
     hotkey, g, CtrlA
+    hotkey, t, CtrlT
     hotkey, d, CtrlW
     hotkey, 8, CtrlShiftT
     hotkey, 9, CtrlShiftTab
@@ -65,6 +66,7 @@ VimKeysOn() {
     hotkey, y, on
     hotkey, g, on
     hotkey, d, on
+    hotkey, t, on
     hotkey, 8, on
     hotkey, 9, on
     hotkey, 0, on
@@ -109,6 +111,7 @@ DeactivateVimKeys() {
     hotkey, y, off
 
     hotkey, g, off
+    hotkey, t, off
     hotkey, d, off
     hotkey, 8, off
     hotkey, 9, off
@@ -252,4 +255,8 @@ CtrlShiftTab() {
 
 CtrlShiftT() {
     Send ^+t
+}
+
+CtrlT() {
+    Send ^t
 }
