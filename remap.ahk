@@ -20,7 +20,7 @@ LControl & RAlt::Send, \
 
 ; pipe to tilde
 ; |::~
-|::Send a
+; |::Send a
 
 ; hash to backslash
 $#::Send, {tab}
