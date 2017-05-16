@@ -107,6 +107,8 @@ nonmousejumpActivate() {
     Hotkey, 3, SendDash
     Hotkey, 4, SendHash
     Hotkey, 5, Something
+    hotkey, 9, CtrlShiftTab
+    hotkey, 0, CtrlTab
 
     hotkey, _, AltTab
     hotkey, =, ShiftAltTab
@@ -198,6 +200,8 @@ nonmousejumpOn() {
     Hotkey, 3, On
     Hotkey, 4, On
     Hotkey, 5, On
+    hotkey, 9, On
+    hotkey, 0, On
 
     hotkey, _, on
     hotkey, =, on
@@ -285,6 +289,8 @@ nonmousejumpDeactivate() {
     Hotkey, 3, Off
     Hotkey, 4, Off
     Hotkey, 5, Off
+    hotkey, 9, Off
+    hotkey, 0, Off
 
     hotkey, _, off
     hotkey, =, off

@@ -3,8 +3,6 @@ CoordMode, Mouse, Screen
 savedPositions.6x := 0
 savedPositions.7x := 0
 savedPositions.8x := 0
-savedPositions.9x := 0
-savedPositions.0x := 0
 savedPositions.yx := 0
 savedPositions.ux := 0
 savedPositions.ix := 0
@@ -24,8 +22,6 @@ savedPositions.slashx := 0
 savedPositions.6y := 0
 savedPositions.7y := 0
 savedPositions.8y := 0
-savedPositions.9y := 0
-savedPositions.0y := 0
 savedPositions.yy := 0
 savedPositions.uy := 0
 savedPositions.iy := 0
@@ -47,8 +43,6 @@ mousejumpActivate() {
 	Hotkey, 6, mousejumpLoad6
 	Hotkey, 7, mousejumpLoad7
 	Hotkey, 8, mousejumpLoad8
-	Hotkey, 9, mousejumpLoad9
-	Hotkey, 0, mousejumpLoad0
 	Hotkey, y, mousejumpLoadY
 	Hotkey, u, mousejumpLoadU
 	Hotkey, i, mousejumpLoadI
@@ -68,8 +62,6 @@ mousejumpActivate() {
 	Hotkey, +6, mousejumpSave6
 	Hotkey, +7, mousejumpSave7
 	Hotkey, +8, mousejumpSave8
-	Hotkey, +9, mousejumpSave9
-	Hotkey, +0, mousejumpSave0
 	Hotkey, +y, mousejumpSaveY
 	Hotkey, +u, mousejumpSaveU
 	Hotkey, +i, mousejumpSaveI
@@ -89,8 +81,6 @@ mousejumpActivate() {
 	Hotkey, 6, On
 	Hotkey, 7, On
 	Hotkey, 8, On
-	Hotkey, 9, On
-	Hotkey, 0, On
 	Hotkey, y, On
 	Hotkey, u, On
 	Hotkey, i, On
@@ -110,8 +100,6 @@ mousejumpActivate() {
 	Hotkey, +6, On
 	Hotkey, +7, On
 	Hotkey, +8, On
-	Hotkey, +9, On
-	Hotkey, +0, On
 	Hotkey, +y, On
 	Hotkey, +u, On
 	Hotkey, +i, On
@@ -134,8 +122,6 @@ mousejumpDeactivate() {
 	Hotkey, 6, Off
 	Hotkey, 7, Off
 	Hotkey, 8, Off
-	Hotkey, 9, Off
-	Hotkey, 0, Off
 	Hotkey, y, Off
 	Hotkey, u, Off
 	Hotkey, i, Off
@@ -155,8 +141,6 @@ mousejumpDeactivate() {
 	Hotkey, +6, Off
 	Hotkey, +7, Off
 	Hotkey, +8, Off
-	Hotkey, +9, Off
-	Hotkey, +0, Off
 	Hotkey, +y, Off
 	Hotkey, +u, Off
 	Hotkey, +i, Off
@@ -193,20 +177,6 @@ mousejumpSave8() {
 	MouseGetPos, xvar, yvar
 	savedPositions.8x := xvar
 	savedPositions.8y := yvar
-}
-
-mousejumpSave9() {
-	global savedPositions
-	MouseGetPos, xvar, yvar
-	savedPositions.9x := xvar
-	savedPositions.9y := yvar
-}
-
-mousejumpSave0() {
-	global savedPositions
-	MouseGetPos, xvar, yvar
-	savedPositions.0x := xvar
-	savedPositions.0y := yvar
 }
 
 mousejumpSaveY() {
@@ -331,16 +301,6 @@ mousejumpLoad7() {
 mousejumpLoad8() {
 	global savedPositions
 	MouseMove, savedPositions.8x, savedPositions.8y
-}
-
-mousejumpLoad9() {
-	global savedPositions
-	MouseMove, savedPositions.9x, savedPositions.9y
-}
-
-mousejumpLoad0() {
-	global savedPositions
-	MouseMove, savedPositions.0x, savedPositions.0y
 }
 
 mousejumpLoadY() {
