@@ -11,18 +11,17 @@ ActivateVimKeys() {
     hotkey, j, DownFunc
     hotkey, k, UpFunc
     hotkey, l, RightFunc
-    hotkey, w, RightWordFunc
+    hotkey, w, CtrlA
     hotkey, b, LeftWordFunc
     hotkey, x, DeleteFunc
     hotkey, i, InsertFunc
-    hotkey, e, InsertFunc
+    hotkey, e, RightWordFunc
     hotkey, s, InsertFunc
     hotkey, a, InsertAfterFunc
     hotkey, o, InsertAfterLineFunc
     hotkey, v, ShiftToggle
     hotkey, p, Paste
     hotkey, y, Copy
-    hotkey, e, CtrlA
     hotkey, t, CtrlT
     hotkey, d, CtrlW
     hotkey, 8, CtrlShiftT
@@ -62,7 +61,6 @@ VimKeysOn() {
     hotkey, b, on
     hotkey, x, on
     hotkey, i, on
-    hotkey, e, on
     hotkey, y, on
     hotkey, e, on
     hotkey, d, on
@@ -107,7 +105,6 @@ DeactivateVimKeys() {
     hotkey, b, off
     hotkey, x, off
     hotkey, i, off
-    hotkey, e, off
     hotkey, y, off
 
     hotkey, e, off
