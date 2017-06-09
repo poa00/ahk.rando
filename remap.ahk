@@ -15,6 +15,9 @@ LControl & RAlt::Send, \
 ; at to double quote
 ; +'::"
 
+; ctrl alt 0 to ctrl alt num-0
+^!0::Send {LControl Down}{LAlt Down}{Numpad0}{LControl Up}{LAlt Up}
+
 ; tilde to pipe
 ~::\
 

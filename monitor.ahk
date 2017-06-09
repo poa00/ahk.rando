@@ -69,14 +69,14 @@ BuildBotCheck() {
 
   If (finished = 0 and g_has_build_bot_finished = 1)
   {
-    ControlSend,, {Shift down}{f5}{Shift up}, EliteDangerous
+    ControlSend,, {Shift down}{f5}{Shift up}, EliteDangerous - Microsoft
   }
 
   If (finished = 1 and g_has_build_bot_finished = 0)
   {
-    ControlSend,, {Shift down}{f5}{Shift up}, EliteDangerous
+    ControlSend,, {Shift down}{f5}{Shift up}, EliteDangerous - Microsoft
     Sleep, 500
-    ControlSend,, {f5}, EliteDangerous
+    ControlSend,, {f5}, EliteDangerous - Microsoft
     Sleep, 500
     ControlSend,, n, Microsoft Visual Studio
 
