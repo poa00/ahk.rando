@@ -16,7 +16,8 @@ LControl & RAlt::Send, \
 ; +'::"
 
 ; ctrl alt 0 to ctrl alt num-0
-^!0::Send {LControl Down}{LAlt Down}{Numpad0}{LControl Up}{LAlt Up}
+; ^!0::Send {LControl Down}{LAlt Down}{Numpad0}{LControl Up}{LAlt Up}
+^0::Send ``
 
 ; tilde to pipe
 ~::\

@@ -4,7 +4,6 @@ DetectHiddenText, On
 
 SetTimer, BuildBotCheck, 4000, On
 SetTimer, RuntimeErrorCheck, 200, On
-SetTimer, GameClosedCheck, 200, On
 SetTimer, UpdateFinishedCheck, 200, On
 
 global g_build_bot_finished := 2
@@ -27,20 +26,6 @@ UpdateFinishedCheck() {
     ControlSend,, {Escape}, Update Finished!
   }
   g_update_finished := update_finished
-}
-
-GameClosedCheck() {
-  global g_game_closed
-  game_closed = 0
-  IfWinExist, Elite - Dangerous (CLIENT)
-  {
-    game_closed = 1
-  }
-  if (game_closed = 0 and g_game_closed = 1)
-  {
-    TrayTip, game closed, all tests passed
-  }
-  g_game_closed := game_closed
 }
 
 RuntimeErrorCheck() {
