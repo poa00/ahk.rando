@@ -30,7 +30,7 @@ LControl & RAlt::Send, \
 $#::Send, {tab}
 ; backslash to hyphen
 ; $\::Send -
-$\::Send a 
+$\::Send, {tab}
 
 ; underscore to backtick
 +-::Send ``

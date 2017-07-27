@@ -2,7 +2,7 @@
 #Persistent
 DetectHiddenText, On
 
-SetTimer, BuildBotCheck, 4000, On
+SetTimer, BuildBotCheck, 20000, On
 SetTimer, RuntimeErrorCheck, 200, On
 SetTimer, UpdateFinishedCheck, 200, On
 

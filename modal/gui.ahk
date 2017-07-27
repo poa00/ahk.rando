@@ -1,3 +1,23 @@
+; Get monitor measurements
+SysGet, Mon1, Monitor, 2
+s1w := Mon1Right - Mon1Left ; 1920
+s1h := Mon1Bottom - Mon1Top ; 1079
+s2w := 1920
+s2h := 1079
+s3w := 1439
+s3h := 899
+
+SysGet, MonCount, MonitorCount
+if MonCount > 1
+{
+    SysGet, Mon2, Monitor, 3
+    s2w := Mon2Right - Mon2Left ; 1920
+    s2h := Mon2Bottom - Mon2Top ; 1079
+    SysGet, Mon3, Monitor, 1
+    s3w := Mon3Right - Mon3Left ; 1920
+    s3h := Mon3Bottom - Mon3Top ; 1079
+}
+
 ; Set up the initial state
 SetWinDelay, -1
 global mode := ""
@@ -108,26 +128,6 @@ Gui, MyGui31:+Owner
 Gui, MyGui32:+Owner
 Gui, MyGui33:+Owner
 Gui, MyGui34:+Owner
-
-; Get monitor measurements
-SysGet, Mon1, Monitor, 2
-s1w := Mon1Right - Mon1Left ; 1920
-s1h := Mon1Bottom - Mon1Top ; 1079
-s2w := 1920
-s2h := 1079
-s3w := 1439
-s3h := 899
-
-SysGet, MonCount, MonitorCount
-if MonCount > 1
-{
-    SysGet, Mon2, Monitor, 1
-    s2w := Mon2Right - Mon2Left ; 1920
-    s2h := Mon2Bottom - Mon2Top ; 1079
-    SysGet, Mon3, Monitor, 3
-    s3w := Mon3Right - Mon3Left ; 1920
-    s3h := Mon3Bottom - Mon3Top ; 1079
-}
 
 x1 := s1w - buttonWidth - 1
 x2 := s1w + 1
