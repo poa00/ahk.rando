@@ -9,8 +9,9 @@
 !2::@
 
 ; right-alt to backslash
-LControl & RAlt::Send, \
-; LControl & Alt::Send, {tab}
+; LControl & RAlt::Send, \
+; LControl & Alt::Send, \
+; LControl & RAlt::MsgBox You pressed AltGr itself.
 
 ; at to double quote
 ; +'::"
@@ -34,6 +35,9 @@ $\::Send, {tab}
 
 ; underscore to backtick
 +-::Send ``
+
+; backtick to backslash
+`::Send \
 
 ; hyphen to underscore
 -::_
