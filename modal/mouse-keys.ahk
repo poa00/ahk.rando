@@ -103,7 +103,7 @@ nonmousejumpActivate() {
     Hotkey, ^o, FastRightMove
 
     Hotkey, 1, TestFunc
-    Hotkey, 2, SendQuestion
+    Hotkey, 2, SendTilde
     Hotkey, 3, SendDash
     Hotkey, 4, SendHash
     Hotkey, 5, Something
@@ -515,8 +515,8 @@ SetSystemCursor( Cursor = "", cx = 0, cy = 0 )
     }   
 }
 
-SendQuestion() {
-  Send, {Raw}?
+SendTilde() {
+  Send ~
   GoToInsert()
 }
 
