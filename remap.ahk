@@ -3,15 +3,14 @@
 ; ^ ctrl
 ; + shift
 
-; Windows to mac remapping
-
 ; double quote to at
-!2::@
++2::@
 
-; right-alt to backslash
-; LControl & RAlt::Send, \
-; LControl & Alt::Send, \
-; LControl & RAlt::MsgBox You pressed AltGr itself.
+; at to double quote
+@::+2
+
+; right-alt to minus
+LControl & Alt::Send -
 
 ; at to double quote
 ; +'::"
@@ -21,7 +20,7 @@
 ;^0::Send ``
 
 ; tilde to pipe
-~::\
+$~::Send |
 
 ; pipe to tilde
 ; |::~
@@ -34,13 +33,16 @@ $#::Send, {tab}
 $\::Send, {tab}
 
 ; underscore to backtick
-+-::Send ``
+$+-::Send ``
 
-; backtick to backslash
-`::Send \
+; backtick to forward slash
+$`::Send /
+
+; forward slash to back slash
+$/::\
 
 ; hyphen to underscore
--::_
+$-::Send _
 
 ; swap colon and semicolon
 $`;::Send `:
