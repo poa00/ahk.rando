@@ -26,11 +26,11 @@ $~::Send |
 ; |::~
 ; |::Send a
 
-; hash to backslash
+; hash to tab
 $#::Send, {tab}
 ; backslash to hyphen
 ; $\::Send -
-$\::Send, {tab}
+$\::Send -
 
 ; underscore to backtick
 $+-::Send ``
