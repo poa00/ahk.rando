@@ -14,6 +14,9 @@ NumPut(300, FILTERKEYS, 12, "UInt") ;iDelayMSec
 NumPut(50, FILTERKEYS, 16, "UInt") ;RepeatMSec
 DllCall("SystemParametersInfo", "UInt", 0x0033, "UInt", 0, "Ptr", &FILTERKEYS, "Uint", 0)
 
+SPI_SETCURSORS := 0x57
+DllCall( "SystemParametersInfo", UInt,SPI_SETCURSORS, UInt,0, UInt,0, UInt,0 )
+
 ActivateMouse() {
     mousejumpActivate()
     nonmousejumpActivate()
@@ -534,17 +537,20 @@ Something() {
   WinSet, Style, ^0xC00000, A
   WinSet, Style, ^0x840000, A
   WinSet, Style, ^0xC40000, A
+  WinMaximize, A
 }
 
 AltTab() {
-    Send {Alt Down}
-    Send, {tab}
+;    Send {Alt Down}
+;    Send, {tab}
     Hotkey, !Enter, ExitAltTab
     Hotkey, !Enter, on
+    Send {Alt Down}
+    Send {tab}
 } 
 
 ShiftAltTab() {
-    Send, !+{tab}
+    Send {tab}
 }
 
 ExitAltTab() {
