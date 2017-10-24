@@ -13,6 +13,10 @@ if MonCount > 1
     SysGet, Mon2, Monitor, 2
     s2w := Mon2Right - Mon2Left ; 1920
     s2h := Mon2Bottom - Mon2Top ; 1079
+}
+
+if MonCount > 2
+{
     SysGet, Mon3, Monitor, 3
     s3w := Mon3Right - Mon3Left ; 1920
     s3h := Mon3Bottom - Mon3Top ; 1079
