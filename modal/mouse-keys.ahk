@@ -325,73 +325,61 @@ RightMouseUp() {
 }
 
 SlowLeftMove() {
-    UpdateCursor()
     global slowSpeed
     MouseMove, -%slowSpeed%, 0, 0,R
 }
 
 SlowUpMove() {
-    UpdateCursor()
     global slowSpeed
     MouseMove, 0, -%slowSpeed%, 0,R
 }
 
 SlowDownMove() {
-    UpdateCursor()
     global slowSpeed
     MouseMove, 0, %slowSpeed%, 0,R
 }
 
 SlowRightMove() {
-    UpdateCursor()
     global slowSpeed
     MouseMove, %slowSpeed%, 0, 0,R
 }
 
 MidLeftMove() {
-    UpdateCursor()
     global midSpeed
     MouseMove, -%midSpeed%, 0, 0,R
 }
 
 MidUpMove() {
-    UpdateCursor()
     global midSpeed
     MouseMove, 0, -%midSpeed%, 0,R
 }
 
 MidDownMove() {
-    UpdateCursor()
     global midSpeed
     MouseMove, 0, %midSpeed%, 0,R
 }
 
 MidRightMove() {
-    UpdateCursor()
     global midSpeed
     MouseMove, %midSpeed%, 0, 0,R
 }
 
 FastLeftMove() {
-    UpdateCursor()
     global fastSpeed
     MouseMove, -%fastSpeed%, 0, 0,R
 }
 
 FastUpMove() {
-    UpdateCursor()
     global fastSpeed
     MouseMove, 0, -%fastSpeed%, 0,R
 }
 
 FastDownMove() {
-    UpdateCursor()
     global fastSpeed
     MouseMove, 0, %fastSpeed%, 0,R
 }
 
 FastRightMove() {
-    UpdateCursor()
     global fastSpeed
     MouseMove, %fastSpeed%, 0, 0,R
 }

@@ -5,6 +5,10 @@
 
 ChangeMode(newMode) {
     global mode
+    if (mode == newMode) {
+        return newMode
+    }
+
     if (mode == "vim") {
         DeactivateVimKeys()
     } else if (mode == "mouse") {

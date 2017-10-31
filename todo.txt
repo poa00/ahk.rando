@@ -1,2 +1,5 @@
 - make a hotkey and mode for completely deactivating everything
 - allow the saved mouse positions to be saved between sessions
+- improve alt tab so that it first holds down alt, then successively presses
+  tab until enter is hit
+- add win + left / right functionality
