@@ -107,8 +107,8 @@ nonmousejumpActivate() {
 
     Hotkey, 1, TestFunc
     Hotkey, 2, SendTilde
-    Hotkey, 3, SendDash
-    Hotkey, 4, SendHash
+    Hotkey, 3, SendHash
+    Hotkey, 4, SendDash
     Hotkey, 5, Something
     hotkey, 9, CtrlShiftTab
     hotkey, 0, CtrlTab
