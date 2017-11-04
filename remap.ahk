@@ -23,7 +23,7 @@
 $~::Send |
 
 ; pipe to tilde
-; |::~
+|::~
 ; |::Send a
 
 ; hash to tab
