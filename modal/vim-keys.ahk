@@ -7,27 +7,28 @@ ActivateVimKeys() {
     hotkey, +A, InsertEndOfLineFunc
     hotkey, +O, InsertLineFunc
 
+    hotkey, 0, CtrlTab
+    hotkey, 8, CtrlShiftT
+    hotkey, 9, CtrlShiftTab
+    hotkey, a, InsertAfterFunc
+    hotkey, b, LeftWordFunc
+    hotkey, d, CtrlW
+    hotkey, e, RightWordFunc
     hotkey, h, LeftFunc
+    hotkey, i, InsertFunc
     hotkey, j, DownFunc
     hotkey, k, UpFunc
     hotkey, l, RightFunc
-    hotkey, w, CtrlA
-    hotkey, b, LeftWordFunc
-    hotkey, x, DeleteFunc
-    hotkey, i, InsertFunc
-    hotkey, e, RightWordFunc
-    hotkey, s, InsertFunc
-    hotkey, a, InsertAfterFunc
-    hotkey, o, InsertAfterLineFunc
-    hotkey, v, ShiftToggle
-    hotkey, p, Paste
-    hotkey, y, Copy
-    hotkey, t, CtrlT
-    hotkey, d, CtrlW
-    hotkey, 8, CtrlShiftT
-    hotkey, 9, CtrlShiftTab
-    hotkey, 0, CtrlTab
     hotkey, n, CtrlF
+    hotkey, o, InsertAfterLineFunc
+    hotkey, p, Paste
+    hotkey, r, CtrlR
+    hotkey, s, InsertFunc
+    hotkey, t, CtrlT
+    hotkey, v, ShiftToggle
+    hotkey, w, CtrlA
+    hotkey, x, DeleteFunc
+    hotkey, y, Copy
 
     hotkey, +h, LeftFunc
     hotkey, +j, DownFunc
@@ -53,27 +54,28 @@ VimKeysOn() {
     hotkey, +A, on
     hotkey, +O, on
 
+    hotkey, 0, on
+    hotkey, 8, on
+    hotkey, 9, on
+    hotkey, a, on
+    hotkey, b, on
+    hotkey, d, on
+    hotkey, e, on
     hotkey, h, on
+    hotkey, i, on
     hotkey, j, on
     hotkey, k, on
     hotkey, l, on
-    hotkey, w, on
-    hotkey, b, on
-    hotkey, x, on
-    hotkey, i, on
-    hotkey, y, on
-    hotkey, e, on
-    hotkey, d, on
-    hotkey, t, on
-    hotkey, 8, on
-    hotkey, 9, on
-    hotkey, 0, on
     hotkey, n, on
-    hotkey, s, on
-    hotkey, a, on
     hotkey, o, on
-    hotkey, v, on
     hotkey, p, on
+    hotkey, r, on
+    hotkey, s, on
+    hotkey, t, on
+    hotkey, v, on
+    hotkey, w, on
+    hotkey, x, on
+    hotkey, y, on
 
     hotkey, +h, on
     hotkey, +j, on
@@ -97,30 +99,29 @@ DeactivateVimKeys() {
     hotkey, +A, off
     hotkey, +O, off
 
+    hotkey, 0, off
+    hotkey, 8, off
+    hotkey, 9, off
+    hotkey, a, off
+    hotkey, b, off
+    hotkey, d, off
+    hotkey, e, off
     hotkey, h, off
+    hotkey, i, off
     hotkey, j, off
     hotkey, k, off
     hotkey, l, off
-    hotkey, w, off
-    hotkey, b, off
-    hotkey, x, off
-    hotkey, i, off
-    hotkey, y, off
-
-    hotkey, e, off
-    hotkey, t, off
-    hotkey, d, off
-    hotkey, 8, off
-    hotkey, 9, off
-    hotkey, 0, off
-
-    hotkey, u, off
     hotkey, n, off
-    hotkey, s, off
-    hotkey, a, off
     hotkey, o, off
-    hotkey, v, off
     hotkey, p, off
+    hotkey, r, off
+    hotkey, s, off
+    hotkey, t, off
+    hotkey, u, off
+    hotkey, v, off
+    hotkey, w, off
+    hotkey, x, off
+    hotkey, y, off
 
     hotkey, +h, off
     hotkey, +j, off
@@ -233,9 +234,17 @@ CtrlA() {
     GoToInsert()
 }
 
+CtrlR() {
+    Send ^r
+}
+
 CtrlF() {
     Send ^f
     GoToInsert()
+}
+
+ReloadTab() {
+    Send !^t
 }
 
 CtrlW() {
