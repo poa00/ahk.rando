@@ -235,7 +235,7 @@ CtrlA() {
 }
 
 CtrlR() {
-    Send ^r
+    Send ^{f5}
 }
 
 CtrlF() {
