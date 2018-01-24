@@ -11,7 +11,6 @@ ChangeMode(newMode) {
     }
 
     try {
-        ActivateVimKeys()
         DeactivateVimKeys()
         ActivateMouse()
         DeactivateMouse()

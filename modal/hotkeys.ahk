@@ -1,6 +1,7 @@
 ; Switch mode
 global mode
 $tab::
+  SetBatchLines -1
   ChangeMode("mouse")
 Return
 CapsLock::
