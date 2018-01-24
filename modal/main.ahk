@@ -2,6 +2,7 @@
 #Include %A_ScriptDir%\modal\change.ahk
 #Include %A_ScriptDir%\modal\vim-keys.ahk
 #Include %A_ScriptDir%\modal\mouse-keys.ahk
+#Include %A_ScriptDir%\other\fancy_ex.ahk
 
 ChangeMode(newMode) {
     global mode
@@ -9,12 +10,16 @@ ChangeMode(newMode) {
         return newMode
     }
 
-    if (mode == "vim") {
+    try {
+        ActivateVimKeys()
         DeactivateVimKeys()
-    } else if (mode == "mouse") {
+        ActivateMouse()
         DeactivateMouse()
-    } else if (mode == "change") {
+        ActivateChange()
         DeactivateChange()
+    }
+    catch ex {
+       FancyEx.Throw(ex)
     }
 
     if (newMode == "vim") {
