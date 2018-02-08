@@ -253,6 +253,7 @@ CtrlW() {
 
 CtrlTab() {
     Send ^`t
+    GoToInsert()
 }
 
 CtrlShiftTab() {
