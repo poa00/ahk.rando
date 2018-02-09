@@ -20,6 +20,7 @@ ActivateVimKeys() {
     hotkey, k, UpFunc
     hotkey, l, RightFunc
     hotkey, n, CtrlF
+    hotkey, m, Minimize
     hotkey, o, InsertAfterLineFunc
     hotkey, p, Paste
     hotkey, r, CtrlR
@@ -67,6 +68,7 @@ VimKeysOn() {
     hotkey, k, on
     hotkey, l, on
     hotkey, n, on
+    hotkey, m, on
     hotkey, o, on
     hotkey, p, on
     hotkey, r, on
@@ -112,6 +114,7 @@ DeactivateVimKeys() {
     hotkey, k, off
     hotkey, l, off
     hotkey, n, off
+    hotkey, m, off
     hotkey, o, off
     hotkey, p, off
     hotkey, r, off
@@ -261,6 +264,10 @@ CtrlShiftTab() {
 
 CtrlShiftT() {
     Send ^+t
+}
+
+Minimize() {
+    WinMinimize, A
 }
 
 CtrlT() {
