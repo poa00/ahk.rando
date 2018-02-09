@@ -253,8 +253,6 @@ CtrlW() {
 
 CtrlTab() {
     Send ^`t
-    GoToInsert()
-}
 
 CtrlShiftTab() {
     Send ^+`t
@@ -266,4 +264,5 @@ CtrlShiftT() {
 
 CtrlT() {
     Send ^t
+    GoToInsert()
 }
