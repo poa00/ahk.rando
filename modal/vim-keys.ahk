@@ -253,6 +253,7 @@ CtrlW() {
 
 CtrlTab() {
     Send ^`t
+}
 
 CtrlShiftTab() {
     Send ^+`t
