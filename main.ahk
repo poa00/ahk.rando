@@ -1,4 +1,5 @@
 #MaxThreads 1
+SetTitleMatchMode, 2
 TrayTip, ahk load, ahk scripts loaded
 ; Run %A_ScriptDir%\monitor.ahk, , , monitorPID
 Send {Alt up}{Shift up}{Ctrl up}

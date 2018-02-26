@@ -255,11 +255,27 @@ CtrlW() {
 }
 
 CtrlTab() {
-    Send ^`t
+    SetTitleMatchMode, 2
+    if WinActive("Visual Studio")
+    {
+        Send ^!{PgDn}
+    }
+    else
+    {
+        Send ^`t
+    }
 }
 
 CtrlShiftTab() {
-    Send ^+`t
+    SetTitleMatchMode, 2
+    if WinActive("Visual Studio")
+    {
+        Send ^!{PgUp}
+    }
+    else
+    {
+        Send ^+`t
+    }
 }
 
 CtrlShiftT() {
