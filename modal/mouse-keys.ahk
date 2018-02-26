@@ -2,7 +2,7 @@
 
 global moveMouseThreads := 0
 global slowSpeed := 12
-global midSpeed := 60
+global midSpeed := 67
 global fastSpeed := 400
 global Cursor := A_ScriptDir . "\modal\red.cur"
 global mousejump := 0

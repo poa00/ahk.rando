@@ -75,3 +75,5 @@ TestFunc() {
   ;   }
   ; }
 }
+
+Esc::Suspend, Toggle
