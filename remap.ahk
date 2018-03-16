@@ -31,15 +31,11 @@ $\::Send -
 ; underscore to backtick
 $+-::Send ``
 
-; backtick to forward slash
-$`::Send /
+; backtick to back slash
+$`::Send \
 
 ; shift backtick to tilde
 $+`::Send ~
-
-; forward slash to back slash
-$/::\
-$+/::?
 
 ; hyphen to underscore
 $-::Send _
