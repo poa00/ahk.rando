@@ -22,10 +22,6 @@
 ; tilde to pipe
 $~::Send |
 
-; pipe to tilde
-|::~
-; |::Send a
-
 ; hash to tab
 $#::Send, {tab}
 ; backslash to hyphen
@@ -38,6 +34,9 @@ $+-::Send ``
 ; backtick to forward slash
 $`::Send /
 
+; shift backtick to tilde
+$+`::Send ~
+
 ; forward slash to back slash
 $/::\
 $+/::?
@@ -48,6 +47,10 @@ $-::Send _
 ; swap colon and semicolon
 $`;::Send `:
 $+`;::Send `;
+
+; negation ¬ to backtick
+$|::Send ``
+; |::Send a
 
 ; Reload this script
 $^!r::
