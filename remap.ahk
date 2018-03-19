@@ -24,12 +24,11 @@ $~::Send |
 
 ; hash to tab
 $#::Send, {tab}
-; backslash to hyphen
-; $\::Send -
-$\::Send -
 
-; underscore to backtick
-$+-::Send ``
+$\::Send _
+
+; underscore to hash
+$+-::Send #
 
 ; backtick to back slash
 $`::Send \
@@ -38,7 +37,7 @@ $`::Send \
 $+`::Send ~
 
 ; hyphen to underscore
-$-::Send _
+$-::Send -
 
 ; swap colon and semicolon
 $`;::Send `:
