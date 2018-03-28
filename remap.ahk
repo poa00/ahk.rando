@@ -19,16 +19,13 @@
 ; ^!0::Send {LControl Down}{LAlt Down}{Numpad0}{LControl Up}{LAlt Up}
 ;^0::Send ``
 
-; tilde to pipe
-$~::Send |
+; tilde to shift tab
+$~::Send +{tab}
 
 ; hash to tab
 $#::Send, {tab}
 
 $\::Send _
-
-; underscore to hash
-$+-::Send #
 
 ; backtick to back slash
 $`::Send \
@@ -46,6 +43,9 @@ $+`;::Send `;
 ; negation ¬ to backtick
 $|::Send ``
 ; |::Send a
+
+; underscore to pipe
+$+-::Send |
 
 ; Reload this script
 $^!r::
