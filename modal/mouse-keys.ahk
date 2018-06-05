@@ -116,6 +116,8 @@ nonmousejumpActivate() {
     hotkey, _, AltTab
     hotkey, =, ShiftAltTab
 
+    Hotkey, w, CtrlA
+
     nonmousejumpOn()
 }
 
@@ -208,6 +210,8 @@ nonmousejumpOn() {
 
     hotkey, _, on
     hotkey, =, on
+
+    hotkey, w, on
 }
 
 nonmousejumpDeactivate() {
@@ -297,6 +301,8 @@ nonmousejumpDeactivate() {
 
     hotkey, _, off
     hotkey, =, off
+
+    hotkey, w, off
 }
 
 MouseDown() {
@@ -507,7 +513,7 @@ SetSystemCursor( Cursor = "", cx = 0, cy = 0 )
 }
 
 SendTilde() {
-  Send ~
+  Send |
   GoToInsert()
 }
 
