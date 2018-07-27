@@ -19,19 +19,58 @@
 ; ^!0::Send {LControl Down}{LAlt Down}{Numpad0}{LControl Up}{LAlt Up}
 ;^0::Send ``
 
-; tilde to shift tab
-$~::Send +{tab}
-
 ; hash to tab
 $#::Send, {tab}
 
 $\::Send _
 
+; negation ¬ to backtick
+$|::
+    SysGet, monitor_count, MonitorCount
+    if (monitor_count != 1)
+    {
+        Send ``
+    } else {
+        Send ~
+    }
+Return
+
 ; backtick to back slash
-$`::Send \
+$`::
+    SysGet, monitor_count, MonitorCount
+    if (monitor_count != 1)
+    {
+        Send \
+    } else {
+        Send +{tab}                                                                                             
+    }
+Return
 
 ; shift backtick to tilde
-$+`::Send ~
+$+`::
+    SysGet, monitor_count, MonitorCount
+    if (monitor_count != 1)
+    {
+        Send ~
+    }
+    else
+    {
+        Send ``
+    }
+Return
+
+; tilde to shift tab
+$~::
+    SysGet, monitor_count, MonitorCount
+    if (monitor_count != 1)
+    {
+        Send +{tab}
+    }
+    else
+    {
+        Send \
+    }
+Return
 
 ; hyphen to underscore
 $-::Send -
@@ -39,10 +78,6 @@ $-::Send -
 ; swap colon and semicolon
 $`;::Send `:
 $+`;::Send `;
-
-; negation ¬ to backtick
-$|::Send ``
-; |::Send a
 
 ; underscore to pipe
 $+-::Send |

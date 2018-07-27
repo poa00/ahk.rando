@@ -1,0 +1,27 @@
+
+   *------------------------------------------------------------*
+   | If you don't finish then you're just busy, not productive. |
+   *------------------------------------------------------------*
+          o
+           o   ^__^
+            o  (oo)\_______
+               (__)\       )\/\
+                   ||----w |
+                   ||     ||
+
+   [e]  <empty buffer>
+
+   MRU
+
+   [0]  ~/unix_setup/src/other/tmux-split-b.sh
+   [S]  ~/.vimrc
+   [2]  ~/unix_setup/README.md
+   [3]  ~/first_principles/readme.md
+   [S]  ~/.tmux.conf
+   [5]  ~/template_src/README.md
+   [S]  ~/readme.md
+   [7]  ~/.minttyrc
+   [8]  ~/gc_tool/_.sh
+   [9]  ~/template_src/dev.sh
+
+   [q]  <quit>
