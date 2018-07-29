@@ -22,7 +22,17 @@
 ; hash to tab
 $#::Send, {tab}
 
-$\::Send _
+$\::
+    SysGet, monitor_count, MonitorCount
+    if (monitor_count != 1)
+    {
+        Send _
+    }
+    else
+    {
+        Send \
+    }
+Return
 
 ; negation ¬ to backtick
 $|::
@@ -42,7 +52,7 @@ $`::
     {
         Send \
     } else {
-        Send +{tab}                                                                                             
+       Send _                                                                                             
     }
 Return
 
@@ -60,17 +70,7 @@ $+`::
 Return
 
 ; tilde to shift tab
-$~::
-    SysGet, monitor_count, MonitorCount
-    if (monitor_count != 1)
-    {
-        Send +{tab}
-    }
-    else
-    {
-        Send \
-    }
-Return
+$~::Send +{tab}
 
 ; hyphen to underscore
 $-::Send -
