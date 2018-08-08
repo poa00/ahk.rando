@@ -1,3 +1,6 @@
+; #Include %A_ScriptDir%\magic_keyboard_remap.ahk
+#Include %A_ScriptDir%\thinkpad_remap.ahk
+
 ; # win key
 ; ! alt
 ; ^ ctrl
@@ -21,53 +24,6 @@
 
 ; hash to tab
 $#::Send, {tab}
-
-$\::
-    SysGet, monitor_count, MonitorCount
-    if (monitor_count != 1)
-    {
-        Send _
-    }
-    else
-    {
-        Send \
-    }
-Return
-
-; negation ¬ to backtick
-$|::
-    SysGet, monitor_count, MonitorCount
-    if (monitor_count != 1)
-    {
-        Send ``
-    } else {
-        Send ~
-    }
-Return
-
-; backtick to back slash
-$`::
-    SysGet, monitor_count, MonitorCount
-    if (monitor_count != 1)
-    {
-        Send \
-    } else {
-       Send _                                                                                             
-    }
-Return
-
-; shift backtick to tilde
-$+`::
-    SysGet, monitor_count, MonitorCount
-    if (monitor_count != 1)
-    {
-        Send ~
-    }
-    else
-    {
-        Send ``
-    }
-Return
 
 ; tilde to shift tab
 $~::Send +{tab}
