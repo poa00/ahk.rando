@@ -1,5 +1,5 @@
-; #Include %A_ScriptDir%\magic_keyboard_remap.ahk
-#Include %A_ScriptDir%\thinkpad_remap.ahk
+#Include %A_ScriptDir%\magic_keyboard_remap.ahk
+; #Include %A_ScriptDir%\thinkpad_remap.ahk
 
 ; # win key
 ; ! alt

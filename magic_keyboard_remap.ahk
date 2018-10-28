@@ -1,6 +1,6 @@
 LWin::LAlt
 LAlt::LWin
-$\::end _
+$\::Send _
 $|::Send ``
 $`::Send \
 $+`::Send ~
