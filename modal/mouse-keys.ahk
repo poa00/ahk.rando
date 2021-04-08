@@ -105,7 +105,6 @@ nonmousejumpActivate() {
     Hotkey, ^i, FastUpMove
     Hotkey, ^o, FastRightMove
 
-    Hotkey, 1, TestFunc
     Hotkey, 2, SendTilde
     Hotkey, 3, SendHash
     Hotkey, 4, SendDash
@@ -200,7 +199,6 @@ nonmousejumpOn() {
     Hotkey, n, On
     Hotkey, m, On
 
-    Hotkey, 1, On
     Hotkey, 2, On
     Hotkey, 3, On
     Hotkey, 4, On
@@ -291,7 +289,6 @@ nonmousejumpDeactivate() {
     Hotkey, `,, Off
     Hotkey, `., Off
 
-    Hotkey, 1, Off
     Hotkey, 2, Off
     Hotkey, 3, Off
     Hotkey, 4, Off

@@ -1,4 +1,10 @@
 #Include %A_ScriptDir%\magic_keyboard_remap.ahk
+
+$\::Send \
+$|::Send ~
+$`::Send _                                                                                             
+$+`::Send ``
+
 ; #Include %A_ScriptDir%\thinkpad_remap.ahk
 
 ; # win key
@@ -32,8 +38,8 @@ $~::Send +{tab}
 $-::Send -
 
 ; swap colon and semicolon
-$`;::Send `:
-$+`;::Send `;
+; $`;::Send `:
+; $+`;::Send `;
 
 ; underscore to pipe
 $+-::Send |
@@ -49,6 +55,8 @@ Return
 #z::
   DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
 Return
+
+f1::suspend
 
 TestFunc() {
   FileDelete, %A_ScriptDir%\debug

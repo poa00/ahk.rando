@@ -5,4 +5,4 @@ TrayTip, ahk load, ahk scripts loaded
 Send {Alt up}{Shift up}{Ctrl up}
 #Include %A_ScriptDir%\modal\main.ahk
 #Include %A_ScriptDir%\modal\hotkeys.ahk
-#Include %A_ScriptDir%\remap.ahk
+; #Include %A_ScriptDir%\remap.ahk
